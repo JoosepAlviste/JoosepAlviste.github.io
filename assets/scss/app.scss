@@ -1,0 +1,210 @@
+@import 'reset.css';
+@import 'variables';
+@import 'mixins';
+
+/* Table of contents
+    1. = Generic styles =
+==============================================>>>>>>*/
+
+
+/*=============================================>>>>>
+= Generic styles =
+===============================================>>>>>*/
+
+body {
+  font-family: $body-font;
+  font-size: 18px;
+  line-height: 1.5;
+
+  background: $body-background;
+}
+
+h1 {
+  font-family: $headings-font;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: $headings-font;
+  font-size: 1.75em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/*= End of Generic styles =*/
+/*=============================================<<<<<*/
+
+
+/*=============================================>>>>>
+= Utilities =
+===============================================>>>>>*/
+
+.icon {
+  display: initial;
+
+  height: 40px;
+  width: 40px;
+}
+
+.has-accent {
+  &.has-accent--bottom:after {
+    display: block;
+    content: "";
+
+    width: 1em;
+    margin: 20px auto;
+
+    border-bottom: 3px solid;
+  }
+}
+
+/*= End of Utilities =*/
+/*=============================================<<<<<*/
+
+
+/*=============================================>>>>>
+= Elements =
+===============================================>>>>>*/
+
+.header {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+.project-section {
+  @extend %flexbox;
+
+  padding: 120px 50px;
+
+  &:not(:first-of-type) {
+    margin-top: 8em;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 8em;
+  }
+
+  @each $project, $background, $color, $accent in $projects {
+    &[data-project="#{$project}"] {
+      background: $background;
+      color: $color;
+
+      .project-section__title:before {
+        border-bottom-color: $accent;
+      }
+
+      a {
+        color: $color;
+        text-decoration: none;
+        border-bottom: 1px solid $color;
+
+        &:visited {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  &.project-section--text-left {
+    text-align: right;
+
+    .project-section__column--has-content {
+      align-items: flex-end;
+    }
+
+    .project-section__title:before {
+      margin-left: auto;
+    }
+  }
+}
+
+.project-section__column {
+  flex: 1;
+
+  &.project-section__column--has-content {
+    @extend %flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
+
+.project-section__title {
+  font-size: 3em;
+  margin-bottom: .5em;
+
+  &:before {
+    content: "";
+    display: block;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    width: 1em;
+    margin-bottom: 15px;
+  }
+}
+
+.project-section__tags {
+  @extend %flexbox;
+  flex-wrap: wrap;
+
+  margin-left: -10px;
+  margin-right: -10px;
+
+  li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footer {
+
+  padding: 8em 0;
+
+  font-size: 1.5em;
+  font-weight: 300;
+
+  text-align: center;
+  color: #fff;
+
+  p {
+    font-weight: 300;
+    margin-bottom: 1.5em;
+  }
+
+  .icon {
+    margin: 0 auto;
+    transition: all .2s ease-in;
+
+    > g {
+      fill: rgba(255, 255, 255, .6);
+      transition: all .2s ease-in;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      > g {
+        fill: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}
+
+
+/*= End of Elements =*/
+/*=============================================<<<<<*/
