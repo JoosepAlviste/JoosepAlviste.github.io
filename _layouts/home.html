@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<header class="header">
+
+    <h1 class="has-accent has-accent--bottom">Joosep Alviste</h1>
+
+    <h2>Full-stack web developer</h2>
+
+</header>
+
+{% assign projects = site.pages | where: "type", "project" | sort: "order" %}
+
+{% for project in projects %}
+    {% include project-section.html project=project %}
+{% endfor %}

@@ -1,0 +1,40 @@
+<section 
+    class="project-section" 
+    data-project="{{ include.project.slug }}"
+>
+
+    <div class="project-section__column">
+        {% capture image_url %}/assets/img/{{ include.project.slug }}.png{% endcapture %}
+        <img 
+            class="project-section__thumbnail" 
+            src="{{ image_url | relative_url }}" 
+            alt="{{ include.project.title }} screenshot"
+        >
+    </div>
+
+    <div class="project-section__column project-section__column--has-content">
+
+        <div>
+            <h3 class="project-section__title">
+                <!-- <a href="{{ include.permalink }}"> -->
+                {{ include.project.title }}                
+                <!-- </a> -->
+            </h3>
+
+            {{ include.project.excerpt }}
+
+            {% if include.project.github_link %}
+                <a href="{{ include.project.github_link }}">
+                    View on GitHub
+                </a>
+            {% endif %}
+        </div>
+
+        <ul class="project-section__tags">
+            {% for tag in include.project.tags %}
+                <li>#{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>

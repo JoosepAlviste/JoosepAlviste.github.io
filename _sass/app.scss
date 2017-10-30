@@ -1,9 +1,12 @@
-@import 'reset.css';
-@import 'variables';
-@import 'mixins';
+@import '_reset';
+
+@import '_variables';
+@import '_mixins';
 
 /* Table of contents
     1. = Generic styles =
+    2. = Utilities =
+    3. = Elements =
 ==============================================>>>>>>*/
 
 
@@ -118,7 +121,8 @@ p {
     }
   }
 
-  &.project-section--text-left {
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
     text-align: right;
 
     .project-section__column--has-content {
