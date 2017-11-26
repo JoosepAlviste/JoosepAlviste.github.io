@@ -1,12 +1,14 @@
 ---
+layout: project
 title: Virtual Observatory
 permalink: /virtual-observatory/
 slug: virtual-observatory
 order: 2
 
-excerpt: >
-    <p>A user interface for viewing and comparing measurements made by satellites, radiosondes etc. Request and visualize data.</p>
-    <p>Created for the GAIA-CLIM project.</p>
+excerpt: |
+    A user interface for viewing and comparing measurements made by satellites, radiosondes etc. Request and visualize data.
+    
+    Created for the GAIA-CLIM project.
 
 tags:
     - front-end
@@ -14,4 +16,8 @@ tags:
     - vuejs
 ---
 
-# This is Virtual Observatory
+## This is Virtual Observatory
+
+```php
+// TODO: Content
+```

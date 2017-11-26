@@ -7,6 +7,7 @@
     1. = Generic styles =
     2. = Utilities =
     3. = Elements =
+    4. = Project Page =
 ==============================================>>>>>>*/
 
 
@@ -34,6 +35,26 @@ h2 {
 
 p {
   margin-bottom: 1em;
+}
+
+.mega-title {
+  font-size: 3.5rem;
+}
+
+.content {
+  ul {
+    list-style: disc;
+    margin-left: 2rem;
+
+    > li > ul {
+      list-style: circle;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
 }
 
 /*= End of Generic styles =*/
@@ -211,4 +232,86 @@ p {
 
 
 /*= End of Elements =*/
+/*=============================================<<<<<*/
+
+
+
+/*=============================================>>>>>
+= Project Page =
+===============================================>>>>>*/
+
+$project-page-container: 720px;
+$image-increased-size: 40px;
+$project-page-container-breakpoint: $project-page-container + ($image-increased-size * 2);
+
+.floating-back-button {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+
+  > a,
+  > a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
+
+.project-page {
+  color: rgb(255, 255, 255);
+
+  @each $project, $background, $color, $accent in $projects {
+    &[data-project="#{$project}"] {
+      img {
+        border-bottom: 8px solid $background;
+      }
+
+      a,
+      a:visited {
+        color: $background;
+        border-color: $background;
+
+        &:hover {
+          color: darken($background, 10%);
+          border-color: darken($background, 10%);
+        }
+      }
+
+      .has-accent--bottom:after {
+        border-color: $background;
+      }
+    }
+  }
+}
+
+.project-page__header {
+  padding-top:    5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.project-page__content {
+  max-width: $project-page-container;
+  margin: 0 auto;
+
+  img {
+    margin-left: -$image-increased-size;
+    margin-right: -$image-increased-size;
+    max-width: calc(100% + #{$image-increased-size} + #{$image-increased-size});
+
+    @media (max-width: $project-page-container-breakpoint) {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/*= End of Project Page =*/
 /*=============================================<<<<<*/

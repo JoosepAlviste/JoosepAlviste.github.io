@@ -1,5 +1,6 @@
 <section 
-    class="project-section" 
+    class="project-section"
+    id="{{ include.project.slug }}-section"
     data-project="{{ include.project.slug }}"
 >
 
@@ -15,13 +16,13 @@
     <div class="project-section__column project-section__column--has-content">
 
         <div>
-            <h3 class="project-section__title">
-                <!-- <a href="{{ include.permalink }}"> -->
-                {{ include.project.title }}                
-                <!-- </a> -->
+            <h3 class="project-section__title" id="{{ include.project.slug }}">
+                 <a href="{{ include.project.permalink }}">
+                    {{ include.project.title }}
+                 </a>
             </h3>
 
-            {{ include.project.excerpt }}
+            {{ include.project.excerpt | markdownify }}
 
             {% if include.project.github_link %}
                 <a href="{{ include.project.github_link }}">

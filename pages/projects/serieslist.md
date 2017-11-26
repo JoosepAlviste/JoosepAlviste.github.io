@@ -1,12 +1,14 @@
 ---
+layout: project
 title: Serieslist
 permalink: /serieslist/
 slug: serieslist
 order: 3
 
-excerpt: >
-    <p>Keep track of episodes of series You are watching. A Laravel project made using Test-Driven Development.</p>
-    <p>A side project.</p>
+excerpt: |
+    Keep track of episodes of series You are watching. A Laravel project made using Test-Driven Development.
+    
+    A side project.
 
 tags:
     - back-end
@@ -19,4 +21,8 @@ tags:
 github_link: https://github.com/JoosepAlviste/serieslist
 ---
 
-# This is Serieslist
+## This is Serieslist
+
+```php
+// TODO: Content
+```
