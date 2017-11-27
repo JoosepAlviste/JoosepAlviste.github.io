@@ -2,15 +2,25 @@
 = Mixins =
 ===============================================>>>>>*/
 
-@mixin flexbox {
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Chrome */
-  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+$wider-than-container-breakpoint: $container-width + ($wider-than-container-size * 2);
+
+%as-wide-as-container {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
 }
 
-%flexbox { @include flexbox }
+%wider-than-container {
+  margin-left:  -$wider-than-container-size;
+  margin-right: -$wider-than-container-size;
+  max-width: calc(100% + (#{$wider-than-container-size * 2}));
+
+  @media (max-width: $wider-than-container-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
 
 /*= End of Mixins =*/
 /*=============================================<<<<<*/

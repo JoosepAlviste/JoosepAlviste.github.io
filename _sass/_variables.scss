@@ -1,7 +1,9 @@
 /*----------- Typography -----------*/
 
-$body-font: 'Open Sans', sans-serif;
-$headings-font: 'Raleway', sans-serif;
+//$body-font: 'Open Sans', sans-serif;
+$body-font: 'Roboto Mono', monospace, sans-serif;
+$headings-font: 'Lato', sans-serif;
+$mono-font: 'Roboto Mono', monospace, sans-serif;
 
 
 /*----------- Colors -----------*/
@@ -16,3 +18,9 @@ $projects: (
                 (virtual-observatory, #e9ecf6, #80859a, #1E5FC9),
                 (serieslist, #7767c4, #fff, #A89ED9),
 );
+
+
+/*----------- Sizes -----------*/
+
+$container-width: 720px;
+$wider-than-container-size: 40px;

@@ -10,12 +10,12 @@ layout: default
 
 <div class="project-page" data-project="{{ page.slug }}">
     <header class="project-page__header">
-        <h1 class="mega-title has-accent has-accent--bottom">
+        <h1 class="mega-title has-accent has-accent--bottom heading--mono">
             {{ page.title }}
         </h1>
     </header>
 
-    <article class="project-page__content content">
+    <article class="project-page__content container content">
         {% capture image_url %}/assets/img/{{ page.slug }}.png{% endcapture %}
         <img
                 src="{{ image_url | relative_url }}"
@@ -25,3 +25,8 @@ layout: default
         {{ page.content | markdownify }}
     </article>
 </div>
+
+
+
+<script src="/assets/js/vendor/tingle.min.js"></script>
+<script src="/assets/js/project.js"></script>

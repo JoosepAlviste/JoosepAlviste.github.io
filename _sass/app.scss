@@ -2,6 +2,7 @@
 
 @import '_variables';
 @import '_mixins';
+@import 'vendor/tingle.min';
 
 /* Table of contents
     1. = Generic styles =
@@ -17,7 +18,7 @@
 
 body {
   font-family: $body-font;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 
   background: $body-background;
@@ -33,8 +34,18 @@ h2 {
   font-size: 1.75em;
 }
 
+h3 {
+  font-family: $headings-font;
+  font-size: 1.5rem;
+}
+
 p {
   margin-bottom: 1em;
+}
+
+pre,
+code {
+  font-family: $mono-font;
 }
 
 .mega-title {
@@ -84,6 +95,51 @@ p {
   }
 }
 
+.container {
+  max-width: $container-width;
+
+  @media (max-width: $container-width) {
+    padding-left:  5px;
+    padding-right: 5px;
+  }
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.tingle-modal-box {
+  width: 90%;
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+}
+
+.tingle-modal-box__content {
+  padding: 1rem;
+}
+
+.tingle-modal {
+  overflow-y: scroll;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
 /*= End of Utilities =*/
 /*=============================================<<<<<*/
 
@@ -109,8 +165,7 @@ p {
 }
 
 .project-section {
-  @extend %flexbox;
-
+  display: flex;
   padding: 120px 50px;
 
   &:not(:first-of-type) {
@@ -160,7 +215,7 @@ p {
   flex: 1;
 
   &.project-section__column--has-content {
-    @extend %flexbox;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 
@@ -170,8 +225,8 @@ p {
 }
 
 .project-section__title {
-  font-size: 3em;
-  margin-bottom: .5em;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 
   &:before {
     content: "";
@@ -184,7 +239,7 @@ p {
 }
 
 .project-section__tags {
-  @extend %flexbox;
+  display: flex;
   flex-wrap: wrap;
 
   margin-left: -10px;
@@ -240,10 +295,6 @@ p {
 = Project Page =
 ===============================================>>>>>*/
 
-$project-page-container: 720px;
-$image-increased-size: 40px;
-$project-page-container-breakpoint: $project-page-container + ($image-increased-size * 2);
-
 .floating-back-button {
   position: absolute;
   top: 25px;
@@ -253,7 +304,7 @@ $project-page-container-breakpoint: $project-page-container + ($image-increased-
   > a:visited {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -280,6 +331,20 @@ $project-page-container-breakpoint: $project-page-container + ($image-increased-
       .has-accent--bottom:after {
         border-color: $background;
       }
+
+      p::selection,
+      code::selection,
+      h1::selection,
+      h2::selection {
+        background: lighten($background, 15%);
+      }
+
+      p::-moz-selection,
+      code::-moz-selection,
+      h1::-moz-selection,
+      h2::-moz-selection {
+        background: lighten($background, 15%);
+      }
     }
   }
 }
@@ -291,24 +356,28 @@ $project-page-container-breakpoint: $project-page-container + ($image-increased-
 }
 
 .project-page__content {
-  max-width: $project-page-container;
   margin: 0 auto;
+  font-family: $mono-font;
 
   img {
-    margin-left: -$image-increased-size;
-    margin-right: -$image-increased-size;
-    max-width: calc(100% + #{$image-increased-size} + #{$image-increased-size});
+    @extend %wider-than-container;
 
-    @media (max-width: $project-page-container-breakpoint) {
-      margin-left: 0;
-      margin-right: 0;
-      max-width: 100%;
-    }
+    cursor: pointer;
   }
 
   h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    @extend %wider-than-container;
+
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  > .columns {
+    @extend %wider-than-container;
+
+    > .column img {
+      @extend %as-wide-as-container;
+    }
   }
 }
 

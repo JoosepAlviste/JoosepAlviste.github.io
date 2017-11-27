@@ -22,6 +22,17 @@ tags:
     - continuous-integration
 ---
 
+## TL;DR
+
+```
+Back-end: PHP, Laravel
+Front-end: JavaScript, Vue.js, SCSS, SPA grading interface
+Continuous Integration: Jenkins, Docker
+UML, Diagrams: Enterprise Architect, Sketch
+Mockups: Sketch
+```
+
+
 ## Background
 
 The created module integrates an automated tester with the Moodle learning 
@@ -30,21 +41,44 @@ tested. This module also includes a convenient user interface for checking
 students' submissions and grading them. Also, the module supports setting 
 multiple deadlines for different groups.
 
-I coordinated with teachers, teacher's assistants and students who use this 
+This plugin was created for use in Tallinn University of Technology. I 
+coordinated with teachers, teacher's assistants and students who use this 
 module daily, in order to create a system that is useful and usable. This 
 project was created for my Bachelor's thesis and is still being maintained 
 by me.
 
 
-## Technologies used
+## Back-end
 
-* Back-end
-    * PHP, [Laravel](https://laravel.com)
-* Front-end
-    * JavaScript, [Vue.js](https://vuejs.org)
-* Continuous Integration
-    * Jenkins, Docker
-* UML, diagrams
-    * Enterprise Architect, Sketch
-* Mockups
-    * Sketch
+The back-end is built on the Laravel framework which is integrated to be
+used alongside Moodle. The back-end modifies Charon task instances, 
+communicates with the tester and provides an API to be used by the 
+teacher's grading environment SPA.
+
+
+## Front-end
+
+There are a number of pages in this plugin. The views include modifying 
+course settings, creating and editing tasks, students' task view and
+a single-page application grading environment for teachers. All of these
+are styled using SCSS and made interactive using Vue.js.
+
+
+## Screenshots
+
+<div class="columns">
+<div class="column">
+
+![Instance form minimal](/assets/img/instance%20form%20minimal.png)
+
+![Popup grading view](/assets/img/popup%20grading%20view.png)
+
+</div>
+<div class="column">
+
+![Instance form advanced](/assets/img/instance%20form%20advanced.png)
+
+![Popup submission view](/assets/img/popup%20submission%20view.png)
+
+</div>
+</div>
