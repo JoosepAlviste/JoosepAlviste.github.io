@@ -24,6 +24,8 @@ var openModal = function (imgUrl) {
         modal.open();
 
         modal.checkOverflow();
+
+        document.querySelector('.tingle-modal').scrollTop = 0;
     }, 100);
 }
 

@@ -24,8 +24,8 @@ tags:
 ## TL;DR
 
 * Back-end: PHP, Laravel
-* Front-end: Bulma, SCSS, JavaScript, Vue.js
-* Continuous Integration: Travis CI, DigitalOcean
+* Front-end: [Bulma](https://bulma.io), SCSS, JavaScript, Vue.js
+* Continuous Integration: [Travis CI](https://travis-ci.org), [Codecov](https://codecov.io), DigitalOcean
 * Source code: [GitHub](https://github.com/JoosepAlviste/serieslist)
 * Live: [https://serieslist.joosep.xyz](https://serieslist.joosep.xyz)
 
@@ -34,3 +34,25 @@ tags:
 
 Used to keep track of your series' progress. Episodes of series can be marked
 as seen and the progress of series can be managed in the My List view.
+
+
+## Screenshots
+
+<div class="columns">
+<div class="column">
+
+![](/assets/img/serieslist-series-list.png)
+
+![](/assets/img/serieslist-my-list.png)
+
+</div>
+<div class="column">
+
+![](/assets/img/serieslist-series.png)
+
+![](/assets/img/serieslist-search.png)
+
+![](/assets/img/serieslist-edit.png)
+
+</div>
+</div>
