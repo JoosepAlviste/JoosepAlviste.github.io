@@ -3,19 +3,19 @@ layout: default
 ---
 
 <div class="floating-back-button">
-    <a href="/#{{ page.slug }}-section">
+    <a class="floating-back-button__link" href="/#{{ page.slug }}-section">
         &larr; Back
     </a>
 </div>
 
 <div class="project-page" data-project="{{ page.slug }}">
-    <header class="project-page__header">
-        <h1 class="mega-title has-accent has-accent--bottom heading--mono">
+    <header class="header">
+        <h1 class="title--large  has-accent  has-accent--bottom">
             {{ page.title }}
         </h1>
     </header>
 
-    <article class="project-page__content container content">
+    <article class="project-page__content container">
         {% capture image_url %}/assets/img/{{ page.slug }}.png{% endcapture %}
         <img
                 src="{{ image_url | relative_url }}"

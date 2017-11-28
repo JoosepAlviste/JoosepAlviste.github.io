@@ -1,0 +1,42 @@
+/*=============================================>>>>>
+= Placeholders =
+===============================================>>>>>*/
+
+$wider-than-container-breakpoint: $container-width + ($wider-than-container-size * 2);
+
+%as-wide-as-container {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+%wider-than-container {
+  margin-left:  -$wider-than-container-size;
+  margin-right: -$wider-than-container-size;
+  max-width: calc(100% + (#{$wider-than-container-size * 2}));
+
+  @media (max-width: $wider-than-container-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+
+%columns--reverse {
+  flex-direction: row-reverse;
+
+  > .column:first-of-type {
+    padding-left:  $column-gap;
+    padding-right: 0;
+  }
+
+  > .column:last-of-type {
+    padding-left:  0;
+    padding-right: $column-gap;
+  }
+}
+
+
+/*= End of Placeholders =*/
+/*=============================================<<<<<*/
