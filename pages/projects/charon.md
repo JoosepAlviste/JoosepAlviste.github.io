@@ -32,6 +32,8 @@ UML, Diagrams: Enterprise Architect, Sketch
 Mockups: Sketch
 ```
 
+Thesis (in Estonian): [https://digi.lib.ttu.ee/i/?8104](https://digi.lib.ttu.ee/i/?8104)
+
 
 ## Background
 

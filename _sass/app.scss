@@ -40,7 +40,11 @@ h3 {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+}
+
+pre {
+  margin-bottom: 1rem;
 }
 
 pre,
@@ -319,11 +323,11 @@ code {
 
       a,
       a:visited {
-        color: $background;
         border-color: $background;
+        color: inherit;
 
         &:hover {
-          color: darken($background, 10%);
+          color: $background;
           border-color: darken($background, 10%);
         }
       }
