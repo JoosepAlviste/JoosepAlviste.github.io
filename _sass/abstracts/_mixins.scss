@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+
+/// Add an accent to element
+/// @param {String} $direction - Either 'before' or 'after', depending on where
+///                                      you want the accent
+/// @param {Length} $margin-top [$accent-margin] - The margin to have above the accent
+/// @param {Length} $margin-right [auto] - The margin to have to the right of the accent
+/// @param {Length} $margin-bottom [$accent-margin] - The margin to have below the accent
+/// @param {Length} $margin-left [auto] - The margin to have to the left of the accent
+/// @param {Length} $thickness [$accent-thickness] - The thickness of the accent
+/// @param {Length} $width [$accent-width] - The width of the accent, how wide it is
+@mixin accent(
+  $direction,
+  $margin-top: $accent-margin,
+  $margin-right: auto,
+  $margin-bottom: $accent-margin,
+  $margin-left: auto,
+  $thickness: $accent-thickness,
+  $width: $accent-width
+) {
+
+  &:#{$direction} {
+    display: block;
+    content: "";
+
+    width: $width;
+    margin: $margin-top $margin-right $margin-bottom $margin-left;
+
+    border-bottom: $thickness solid;
+  }
+}

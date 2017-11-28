@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site.
+// -----------------------------------------------------------------------------
+
+
+.header {
+  padding-top:    $header-padding;
+  padding-bottom: $header-padding;
+
+  text-align: center;
+
+  &.header--main {
+    padding-top:    $header-main-padding;
+    padding-bottom: $header-main-padding;
+
+    > .header__title {
+      text-transform: uppercase;
+    }
+  }
+}

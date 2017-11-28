@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the floating back button component.
+// -----------------------------------------------------------------------------
+
+
+.floating-back-button {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+
+  .floating-back-button__link {
+    font-size: $larger-text-size;
+
+    border-bottom: none;
+  }

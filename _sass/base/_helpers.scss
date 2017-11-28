@@ -1,0 +1,12 @@
+/**
+ * Add an accent to an element.
+ */
+.has-accent {
+  &.has-accent--bottom {
+    @include accent('after', $thickness: 3px);
+  }
+
+  &.has-accent--top {
+    @include accent('before', $margin-top: 0, $margin-left: 0, $margin-right: 0);
+  }
+}

@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the container of the site.
+// -----------------------------------------------------------------------------
+
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+
+  @media (max-width: $container-width) {
+    padding-left:  $column-gap;
+    padding-right: $column-gap;
+  }
+}

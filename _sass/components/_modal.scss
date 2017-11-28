@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the modal component.
+// -----------------------------------------------------------------------------
+
+
+.tingle-modal {
+  padding-top:    $modal-outer-padding;
+  padding-bottom: $modal-outer-padding;
+
+  overflow-y: scroll;
+}
+
+.tingle-modal-box {
+  width: $modal-width;
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+}
+
+  .tingle-modal-box__content {
+    padding: $modal-inner-padding;
+  }

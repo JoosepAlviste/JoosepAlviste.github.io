@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Project page.
+// -----------------------------------------------------------------------------
+
+
+.project-page {
+  @each $project, $background, $color, $accent in $projects {
+    &[data-project="#{$project}"] {
+      img {
+        border-bottom: $img-border-bottom-width solid $background;
+      }
+
+      a {
+        border-color: $background;
+
+        &:hover {
+          color: $background;
+        }
+      }
+
+      .has-accent--bottom:after {
+        border-color: $background;
+      }
+
+      p::selection,
+      code::selection,
+      h1::selection,
+      h2::selection {
+        background: lighten($background, 15%);
+      }
+
+      p::-moz-selection,
+      code::-moz-selection,
+      h1::-moz-selection,
+      h2::-moz-selection {
+        background: lighten($background, 15%);
+      }
+    }
+  }
+}
+
+  .project-page__content {
+    img {
+      @extend %wider-than-container;
+
+      cursor: pointer;
+    }
+
+    h2 {
+      @extend %wider-than-container;
+
+      margin-top:    $project-page-title-margin-top;
+      margin-bottom: $project-page-title-margin-bottom;
+    }
+
+    > .columns {
+      @extend %wider-than-container;
+
+      > .column img {
+        @extend %as-wide-as-container;
+      }
+    }
+  }

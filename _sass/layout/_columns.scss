@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the columns/grid of the site.
+// -----------------------------------------------------------------------------
+
+
+.columns {
+  display: flex;
+}
+
+  .column {
+    flex: 1;
+    padding-left:  $column-gap;
+    padding-right: $column-gap;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }

@@ -23,12 +23,6 @@
             </h3>
 
             {{ include.project.excerpt | markdownify }}
-
-            {% if include.project.github_link %}
-                <a href="{{ include.project.github_link }}">
-                    View on GitHub
-                </a>
-            {% endif %}
         </div>
 
         <ul class="project-section__tags">

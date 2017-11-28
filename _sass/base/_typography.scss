@@ -1,0 +1,42 @@
+/**
+ * Default styles for the whole page.
+ */
+body {
+  color: $body-color;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: 1.5;
+}
+
+
+h1 {
+  font-family: $headings-font;
+  font-size: $heading-font-size;
+}
+
+
+h2 {
+  font-family: $headings-font;
+  font-size: $subheading-font-size;
+}
+
+
+h3 {
+  font-family: $headings-font;
+  font-size: $lowest-heading-font-size;
+}
+
+
+pre,
+code {
+  font-family: $mono-font;
+}
+
+
+/**
+ * Typography helpers.
+ */
+
+.title--large {
+  font-size: $large-title-size;
+}
