@@ -68,16 +68,16 @@ are styled using SCSS and made interactive using Vue.js.
 <div class="columns">
 <div class="column">
 
-![Instance form minimal](/assets/img/charon-instance-form-minimal.png)
+![Charon instance creation form minimal](/assets/img/charon-instance-form-minimal.png)
 
-![Popup grading view](/assets/img/charon-popup-grading-view.png)
+![Grading view for teachers](/assets/img/charon-popup-grading-view.png)
 
 </div>
 <div class="column">
 
-![Instance form advanced](/assets/img/charon-instance-form-advanced.png)
+![Charon instance creation form advanced](/assets/img/charon-instance-form-advanced.png)
 
-![Popup submission view](/assets/img/charon-popup-submission-view.png)
+![One submission view for teachers](/assets/img/charon-popup-submission-view.png)
 
 </div>
 </div>

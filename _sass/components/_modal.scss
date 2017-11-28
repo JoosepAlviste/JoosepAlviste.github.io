@@ -20,4 +20,10 @@
 
   .tingle-modal-box__content {
     padding: $modal-inner-padding;
+
+    color: #333;
+
+    > p {
+      margin-bottom: 0;
+    }
   }

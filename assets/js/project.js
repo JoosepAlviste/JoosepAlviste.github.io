@@ -11,14 +11,15 @@ var registerImgClickListeners = function () {
         $img.addEventListener('click', function (e) {
             var $elem = e.target;
             var imgUrl = $elem.getAttribute('src');
+            var altText = $elem.getAttribute('alt');
 
-            openModal(imgUrl);
+            openModal(imgUrl, altText);
         });
     });
 }
 
-var openModal = function (imgUrl) {
-    modal.setContent('<img src="' + imgUrl + '"/>');
+var openModal = function (imgUrl, alt) {
+    modal.setContent('<img src="' + imgUrl + '"/><p>' + alt + '</p>');
 
     setTimeout(function () {
         modal.open();

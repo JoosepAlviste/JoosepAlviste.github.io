@@ -21,6 +21,7 @@ tags:
 
 * JavaScript
 * Vue.js, Vuex
+* [Plotly.js](https://plot.ly/javascript/)
 * SCSS
 
 
@@ -35,16 +36,15 @@ This project is created for the GAIA-CLIM project.
 
 ## Front-end
 
-The front-end is built on Vue.js and Vuex. A very important part in this application
+The front-end is built using Vue.js and Vuex. A very important part in this application
 is requesting, storing and displaying information about all sorts of different 
 measurements. Vuex is used to manipulate and store all this data. The structure of
 the data is quite complex, so the hardest part of this project was filtering and
-requesting this data.
+requesting this data. There is a lot of information required to be displayed on 
+plots and different information is required at different times. Managing these conditions
+of when and where to display certain information was also a tough task in this project. 
 
-
-```
-// TODO: Content
-```
+Visualizing data was done using Plotly.js which was integrated with Vue.js.
 
 
 ## Screenshots
@@ -55,12 +55,12 @@ requesting this data.
 
 ![Virtual observatory](/assets/img/virtual-observatory.png)
 
-![Tutorials](/assets/img/virtual-observatory-tutorials.png)
+![Tutorials page](/assets/img/virtual-observatory-tutorials.png)
 
 </div>
 <div class="column">
 
-![Closed sidebar](/assets/img/virtual-observatory-large.png)
+![Closed sidebar and large plots](/assets/img/virtual-observatory-large.png)
 
 </div>
 </div>
