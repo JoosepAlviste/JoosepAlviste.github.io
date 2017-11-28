@@ -21,8 +21,16 @@ tags:
     - vuejs
 ---
 
-## This is Serieslist
+## TL;DR
 
-```php
-// TODO: Content
-```
+* Back-end: PHP, Laravel
+* Front-end: Bulma, SCSS, JavaScript, Vue.js
+* Continuous Integration: Travis CI, DigitalOcean
+* Source code: [GitHub](https://github.com/JoosepAlviste/serieslist)
+* Live: [https://serieslist.joosep.xyz](https://serieslist.joosep.xyz)
+
+
+## Background
+
+Used to keep track of your series' progress. Episodes of series can be marked
+as seen and the progress of series can be managed in the My List view.

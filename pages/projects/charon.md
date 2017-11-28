@@ -24,15 +24,12 @@ tags:
 
 ## TL;DR
 
-```
-Back-end: PHP, Laravel
-Front-end: JavaScript, Vue.js, SCSS, SPA grading interface
-Continuous Integration: Jenkins, Docker
-UML, Diagrams: Enterprise Architect, Sketch
-Mockups: Sketch
-```
-
-Thesis (in Estonian): [https://digi.lib.ttu.ee/i/?8104](https://digi.lib.ttu.ee/i/?8104)
+* Back-end: PHP, Laravel
+* Front-end: JavaScript, Vue.js, SCSS, SPA grading interface
+* Continuous Integration: Jenkins, Docker
+* UML, Diagrams: Enterprise Architect, Sketch
+* Mockups: Sketch
+* Thesis (in Estonian): [https://digi.lib.ttu.ee/i/?8104](https://digi.lib.ttu.ee/i/?8104)
 
 
 ## Background

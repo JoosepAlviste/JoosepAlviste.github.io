@@ -16,8 +16,16 @@ tags:
     - vuejs
 ---
 
-## This is Virtual Observatory
+## TL;DR
 
-```php
+* JavaScript
+* Vue.js
+* Vuex
+* SCSS
+
+
+## Background
+
+```
 // TODO: Content
 ```
