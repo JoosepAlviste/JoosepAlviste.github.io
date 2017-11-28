@@ -7,8 +7,8 @@
   max-width: $container-width;
   margin: 0 auto;
 
-  @media (max-width: $container-width) {
-    padding-left:  $column-gap;
-    padding-right: $column-gap;
+  @include until-container {
+    padding-left:  $column-gap * 2;
+    padding-right: $column-gap * 2;
   }
 }

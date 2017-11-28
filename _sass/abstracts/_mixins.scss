@@ -12,6 +12,7 @@
 /// @param {Length} $margin-left [auto] - The margin to have to the left of the accent
 /// @param {Length} $thickness [$accent-thickness] - The thickness of the accent
 /// @param {Length} $width [$accent-width] - The width of the accent, how wide it is
+/// @param {Color} $color [inherit] - The color of the accent
 @mixin accent(
   $direction,
   $margin-top: $accent-margin,
@@ -19,7 +20,8 @@
   $margin-bottom: $accent-margin,
   $margin-left: auto,
   $thickness: $accent-thickness,
-  $width: $accent-width
+  $width: $accent-width,
+  $color: None
 ) {
 
   &:#{$direction} {
@@ -30,5 +32,16 @@
     margin: $margin-top $margin-right $margin-bottom $margin-left;
 
     border-bottom: $thickness solid;
+
+    @if $color {
+      border-color: $color;
+    }
+  }
+}
+
+
+@mixin until-container {
+  @media (max-width: $container-width) {
+    @content;
   }
 }

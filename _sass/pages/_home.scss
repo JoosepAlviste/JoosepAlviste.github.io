@@ -25,6 +25,15 @@
     .has-accent--top:before {
       margin-left: auto;
     }
+
+    @include until-container {
+      flex-direction: column;
+
+      > .project-section__content {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
   }
 
   @each $project, $background, $color, $accent in $projects {
@@ -35,9 +44,33 @@
       .has-accent--top:before {
         border-bottom-color: $accent;
       }
+
+      @include until-container {
+
+        .project-section__title {
+          @include accent('after', $color: $accent, $margin-top: 25px, $margin-bottom: 25px);
+        }
+      }
     }
   }
+
+  @include until-container {
+    padding: 50px 20px;
+
+    flex-direction: column;
+  }
 }
+
+  .project-section__title {
+    @include until-container {
+
+      text-align: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 
   .project-section__content {
     display: flex;
@@ -55,5 +88,9 @@
     > li {
       padding-left:  $project-tags-padding;
       padding-right: $project-tags-padding;
+    }
+
+    @include until-container {
+      margin-top: 25px;
     }
   }

@@ -15,7 +15,7 @@ $wider-than-container-breakpoint: $container-width + ($wider-than-container-size
   margin-right: -$wider-than-container-size;
   max-width: calc(100% + (#{$wider-than-container-size * 2}));
 
-  @media (max-width: $wider-than-container-breakpoint) {
+  @include until-container {
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
