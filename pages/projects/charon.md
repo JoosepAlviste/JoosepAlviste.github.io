@@ -49,10 +49,9 @@ by me.
 
 ## Back-end
 
-The back-end is built on the Laravel framework which is integrated to be
-used alongside Moodle. The back-end modifies Charon task instances, 
-communicates with the tester and provides an API to be used by the 
-teacher's grading environment SPA.
+The back-end is built on the Laravel framework integrated with Moodle. 
+The back-end modifies Charon task instances, communicates with the tester 
+and provides an API to be used by the teacher's grading environment SPA.
 
 
 ## Front-end

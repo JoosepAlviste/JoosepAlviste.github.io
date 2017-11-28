@@ -30,6 +30,15 @@ var openModal = function (imgUrl, alt) {
     }, 100);
 }
 
+var registerModalClickListeners = function () {
+    var $modal = document.querySelector('.tingle-modal');
+
+    $modal.addEventListener('click', function (e) {
+        modal.close();
+    });
+}
+
 window.onload = function () {
     registerImgClickListeners();
+    registerModalClickListeners();
 }
