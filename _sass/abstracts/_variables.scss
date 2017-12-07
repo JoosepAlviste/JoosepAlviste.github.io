@@ -10,6 +10,7 @@ $headings-font: 'Lato', sans-serif;
 $mono-font: 'Roboto Mono', monospace, sans-serif;
 
 $body-font-size: 16px;
+$mega-title-size: 4rem;
 $large-title-size: 3rem;
 $heading-font-size: 2rem;
 $subheading-font-size: 1.75rem;
@@ -27,9 +28,9 @@ $body-color: rgb(255, 255, 255);
 /*----------- Misc -----------*/
 
 $projects: (
-                (charon, #59c1e6, #fff, #FED766),
-                (virtual-observatory, #e9ecf6, #636990, #1E5FC9),
-                (serieslist, #7767c4, #fff, #A89ED9),
+                (charon, #59c1e6),
+                (virtual-observatory, #1E5FC9),
+                (serieslist, #7767c4),
 );
 
 

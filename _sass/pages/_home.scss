@@ -3,94 +3,175 @@
 // -----------------------------------------------------------------------------
 
 
+//.project-section {
+//  padding: 120px 50px;
+//
+//  &:not(:first-of-type) {
+//    margin-top: 8em;
+//  }
+//
+//  &:not(:last-of-type) {
+//    margin-bottom: 8em;
+//  }
+//
+//  &:nth-of-type(2n) {
+//    @extend %columns--reverse;
+//
+//    > .project-section__content {
+//      align-items: flex-end;
+//      text-align: right;
+//    }
+//
+//    .has-accent--top:before {
+//      margin-left: auto;
+//    }
+//
+//    @include until-container {
+//      flex-direction: column;
+//
+//      > .project-section__content {
+//        align-items: flex-start;
+//        text-align: left;
+//      }
+//    }
+//  }
+//
+//  @each $project, $background, $color, $accent in $projects {
+//    &[data-project="#{$project}"] {
+//      background: $background;
+//      color: $color;
+//
+//      .has-accent--top:before {
+//        border-bottom-color: $accent;
+//      }
+//
+//      @include until-container {
+//
+//        .project-section__title {
+//          @include accent('after', $color: $accent, $margin-top: 25px, $margin-bottom: 25px);
+//        }
+//      }
+//    }
+//  }
+//
+//  @include until-container {
+//    padding: 50px 20px;
+//
+//    flex-direction: column;
+//  }
+//}
+//
+//  .project-section__title {
+//    @include until-container {
+//
+//      text-align: center;
+//
+//      &::before {
+//        display: none;
+//      }
+//    }
+//  }
+//
+//  .project-section__content {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//  }
+//
+//  .project-section__tags {
+//    display: flex;
+//    flex-wrap: wrap;
+//
+//    margin-left:  -$project-tags-padding;
+//    margin-right: -$project-tags-padding;
+//
+//    > li {
+//      padding-left:  $project-tags-padding;
+//      padding-right: $project-tags-padding;
+//    }
+//
+//    @include until-container {
+//      margin-top: 25px;
+//    }
+//  }
+
+
+$project-section-padding-top:    120px;
+$project-section-padding-bottom: 70px;
+
+
 .project-section {
-  padding: 120px 50px;
+  padding-top:    $project-section-padding-top;
+  padding-bottom: $project-section-padding-bottom;
 
-  &:not(:first-of-type) {
-    margin-top: 8em;
-  }
+  @each $project, $color in $projects {
+    &[data-project='#{$project}'] {
 
-  &:not(:last-of-type) {
-    margin-bottom: 8em;
-  }
+      @include selection($color);
 
-  &:nth-of-type(2n) {
-    @extend %columns--reverse;
+      a {
+        border-bottom-color: $color;
 
-    > .project-section__content {
-      align-items: flex-end;
-      text-align: right;
-    }
-
-    .has-accent--top:before {
-      margin-left: auto;
-    }
-
-    @include until-container {
-      flex-direction: column;
-
-      > .project-section__content {
-        align-items: flex-start;
-        text-align: left;
-      }
-    }
-  }
-
-  @each $project, $background, $color, $accent in $projects {
-    &[data-project="#{$project}"] {
-      background: $background;
-      color: $color;
-
-      .has-accent--top:before {
-        border-bottom-color: $accent;
-      }
-
-      @include until-container {
-
-        .project-section__title {
-          @include accent('after', $color: $accent, $margin-top: 25px, $margin-bottom: 25px);
+        &:hover {
+          color: $color;
         }
       }
     }
   }
-
-  @include until-container {
-    padding: 50px 20px;
-
-    flex-direction: column;
-  }
 }
 
+
   .project-section__title {
+    margin-bottom: $generic-margin-bottom;
+
+    text-align: center;
+    font-size: $mega-title-size;
+
+    a {
+      border-bottom: none;
+    }
+
     @include until-container {
+      font-size: $large-title-size;
+    }
+  }
 
-      text-align: center;
 
-      &::before {
-        display: none;
+  .project-section__tags {
+    text-align: right;
+    padding-right: $generic-margin-bottom;
+
+    @include until-container {
+      padding-right:  0;
+      padding-bottom: $generic-margin-bottom;
+
+      text-align: left;
+
+      li {
+        display: inline;
+
+        margin-right: 1rem;
       }
     }
   }
 
   .project-section__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    flex: 2;  /* We want this to be larger than the tags column */
 
-  .project-section__tags {
-    display: flex;
-    flex-wrap: wrap;
+    border-left: 3px solid;
+    padding-left: $generic-margin-bottom;
 
-    margin-left:  -$project-tags-padding;
-    margin-right: -$project-tags-padding;
-
-    > li {
-      padding-left:  $project-tags-padding;
-      padding-right: $project-tags-padding;
+    @each $project, $color in $projects {
+      .project-section[data-project='#{$project}'] & {
+        border-color: $color;
+      }
     }
 
     @include until-container {
-      margin-top: 25px;
+      padding-top:  $generic-margin-bottom;
+      padding-left: 0;
+
+      border-left: none;
+      border-top:  3px solid;
     }
   }

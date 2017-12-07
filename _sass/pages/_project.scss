@@ -3,38 +3,25 @@
 // -----------------------------------------------------------------------------
 
 
-.project-page {
-  @each $project, $background, $color, $accent in $projects {
-    &[data-project="#{$project}"] {
-      img {
-        border-bottom: $img-border-bottom-width solid $background;
-      }
+@each $project, $color in $projects {
+  .project-page[data-project="#{$project}"] {
 
-      a {
-        border-color: $background;
+    @include selection($color);
 
-        &:hover {
-          color: $background;
-        }
-      }
+    img {
+      border-bottom: $img-border-bottom-width solid $color;
+    }
 
-      .has-accent--bottom:after {
-        border-color: $background;
-      }
+    a {
+      border-color: $color;
 
-      p::selection,
-      code::selection,
-      h1::selection,
-      h2::selection {
-        background: lighten($background, 15%);
+      &:hover {
+        color: $color;
       }
+    }
 
-      p::-moz-selection,
-      code::-moz-selection,
-      h1::-moz-selection,
-      h2::-moz-selection {
-        background: lighten($background, 15%);
-      }
+    .has-accent--bottom:after {
+      border-color: $color;
     }
   }
 }

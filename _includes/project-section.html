@@ -1,35 +1,33 @@
 <section 
-    class="columns  project-section"
+    class="project-section  container"
     id="{{ include.project.slug }}-section"
     data-project="{{ include.project.slug }}"
 >
 
-    <div class="column">
-        {% capture image_url %}/assets/img/{{ include.project.slug }}.png{% endcapture %}
-        <img 
-            class="project-section__thumbnail" 
-            src="{{ image_url | relative_url }}" 
-            alt="{{ include.project.title }} screenshot"
-        >
-    </div>
+    <div class="project-section__container">
 
-    <div class="column  project-section__content">
+        <h3 class="project-section__title" id="{{ include.project.slug }}">
+            <a href="{{ include.project.permalink }}">
+                {{ include.project.title }}
+            </a>
+        </h3>
 
-        <div>
-            <h3 class="project-section__title  title--large  has-accent  has-accent--top" id="{{ include.project.slug }}">
-                 <a href="{{ include.project.permalink }}">
-                    {{ include.project.title }}
-                 </a>
-            </h3>
+        <div class="columns">
+            <div class="column  project-section__tags">
+                <ul>
+                    {% for tag in include.project.tags %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-            {{ include.project.excerpt | markdownify }}
+            <div class="column  project-section__content">
+                {{ include.project.excerpt | markdownify }}
+
+                <a href="/{{ include.project.slug }}">More...</a>
+            </div>
         </div>
 
-        <ul class="project-section__tags">
-            {% for tag in include.project.tags %}
-                <li>#{{ tag }}</li>
-            {% endfor %}
-        </ul>
     </div>
 
 </section>

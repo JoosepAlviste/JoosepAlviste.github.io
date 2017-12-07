@@ -10,11 +10,54 @@
   text-align: center;
 
   &.header--main {
-    padding-top:    $header-main-padding;
-    padding-bottom: $header-main-padding;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    padding-top:    0;
+    padding-bottom: 0;
 
-    > .header__title {
-      text-transform: uppercase;
+    overflow: hidden;
+
+    > .header__content {
+      padding-bottom: $header-main-padding;
+      text-align: left;
+
+      z-index: 2;
     }
   }
 }
+
+  .header__content {
+    padding-left:  $column-gap;
+    padding-right: $column-gap;
+
+    font-size: 1.15rem;
+  }
+
+  .header__background {
+    position: absolute;
+    bottom: 25px;
+    left:   35px;
+
+    overflow: hidden;
+  }
+
+    .header__title {
+      opacity: 0.1;
+      font-size: 16rem;
+      line-height: 1.15;
+      text-align: left;
+      font-weight: 700;
+      font-family: $mono-font;
+
+      user-select: none;
+      cursor: default;
+
+      overflow: hidden;
+
+      @include until-container {
+        font-size: 5rem;
+      }
+    }

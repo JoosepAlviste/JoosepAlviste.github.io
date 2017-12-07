@@ -45,3 +45,9 @@
     @content;
   }
 }
+
+@mixin selection($color) {
+  ::selection {
+    background: lighten($color, 15%);
+  }
+}
