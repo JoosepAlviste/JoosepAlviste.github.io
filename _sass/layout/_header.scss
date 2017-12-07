@@ -11,18 +11,18 @@
 
   &.header--main {
     display: flex;
-    position: relative;
-    height: 100vh;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    height: 100vh;
     padding-top:    0;
     padding-bottom: 0;
 
     overflow: hidden;
+    text-align: left;
 
     > .header__content {
       padding-bottom: $header-main-padding;
-      text-align: left;
 
       z-index: 2;
     }
@@ -48,7 +48,6 @@
       opacity: 0.1;
       font-size: 16rem;
       line-height: 1.15;
-      text-align: left;
       font-weight: 700;
       font-family: $mono-font;
 

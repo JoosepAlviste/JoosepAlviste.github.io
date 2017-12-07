@@ -4,6 +4,7 @@
 
 
 /// Add an accent to element
+///
 /// @param {String} $direction - Either 'before' or 'after', depending on where
 ///                                      you want the accent
 /// @param {Length} $margin-top [$accent-margin] - The margin to have above the accent
@@ -40,12 +41,18 @@
 }
 
 
+/// Add some styles which only apply if the screen is smaller than the container
 @mixin until-container {
   @media (max-width: $container-width) {
     @content;
   }
 }
 
+
+/// Recolors the selection inside this element. Also lightens it to try to
+/// Negate the opacity change.
+///
+/// @param {Color} $color - The color of the highlight
 @mixin selection($color) {
   ::selection {
     background: lighten($color, 15%);
