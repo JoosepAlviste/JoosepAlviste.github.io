@@ -43,10 +43,25 @@ using test-driven development.
 
 ## Back-end
 
-The main focus of this project is on the back-end. There are a few complex queries
-and cases of information handling in regards to calculating the latest seen 
-episodes for users and the next episode they should watch. All of the written 
-code is covered with unit and feature tests with a line coverage of 91%.
+The main focus of this project is on the back-end. The back-end handles 
+CRUD operations on series, seasons and episodes, which is a bit complex
+since they are all modified in one request. In addition, there are a few 
+complex queries and cases of information handling in regards to 
+calculating the latest seen episodes for users and the next episode they 
+should watch. 
+
+All of the written code is covered with unit and feature tests with a 
+line coverage of 91%.
+
+
+## Continuous integration
+
+I use Travis CI to automatically run tests every time I commit something. 
+The results for the tests are sent to Codecov so that code coverage and 
+other test related statistics can be viewed there. If these tests pass,
+the deployment process is triggered, which uses SSH to log into the 
+Docker droplet, executes a Git pull in the project folder and runs 
+database migrations.
 
 
 ## Screenshots
