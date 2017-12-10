@@ -50,8 +50,7 @@ complex queries and cases of information handling in regards to
 calculating the latest seen episodes for users and the next episode they 
 should watch. 
 
-All of the written code is covered with unit and feature tests with a 
-line coverage of 91%.
+All of the written code is covered with unit and feature tests.
 
 
 ## Continuous integration

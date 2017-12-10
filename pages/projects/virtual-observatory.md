@@ -36,15 +36,13 @@ This project is created for the GAIA-CLIM project.
 
 ## Front-end
 
-The front-end is built using Vue.js and Vuex. An important part in this application
-is requesting, storing and displaying information about all sorts of different 
-measurements. Vuex is used to manipulate and store all this data. The structure of
-the data is quite complex, so the hardest part of this project was filtering and
-requesting this data. There is a lot of information required to be displayed on 
-plots and different information is required at different times. Managing these conditions
-of when and where to display certain information was also a tough task in this project. 
+The front-end is built using Vue.js and Vuex. Visualizing data was done using 
+Plotly.js which was integrated with Vue.js.
 
-Visualizing data was done using Plotly.js which was integrated with Vue.js.
+This application is very data-intensive since its main purpose is to fetch and display
+information about all sorts of different measurements. Vuex is used to manipulate and 
+store all this data. There is a lot of information required to be displayed on plots 
+and different information is required at different times.
 
 
 ## Screenshots
