@@ -1,9 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the icon component.
 // -----------------------------------------------------------------------------
+@import '../abstracts/all';
 
 
 .icon {
   height: $icon-size;
   width: $icon-size;
 }
+
+  .icon--large {
+    height: $icon-size-large;
+    width: $icon-size-large;
+  }

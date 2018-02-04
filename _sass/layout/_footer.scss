@@ -1,15 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site.
 // -----------------------------------------------------------------------------
+@import '../abstracts/all';
 
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: $footer-padding 0;
 
   text-align: center;
 }
 
   .footer__text {
+    position: relative;
     margin-bottom: 2rem;
 
     font-size: $larger-text-size;
@@ -18,6 +23,11 @@
       // Otherwise the email is too long for small devices
       font-size: $larger-text-size - 0.25rem;
     }
+
+    @include until-smallest-screen {
+      // Otherwise the email is too long for the smallest devices
+      font-size: 1rem;
+    }
   }
 
   .footer__icon-link {
@@ -25,6 +35,19 @@
   }
 
   .footer__icon {
+    fill: rgba(255, 255, 255, .6);
+  }
+
+  .footer__icon--copy {
+    transition: all .2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .footer__icon--github {
     transition: all .2s ease-in;
 
     > g {

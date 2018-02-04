@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+@import 'variables';
 
 
 /// Add an accent to element
@@ -41,9 +42,17 @@
 }
 
 
-/// Add some styles which only apply if the screen is smaller than the container
+/// Add styles which only apply if the screen is smaller than the container
 @mixin until-container {
   @media (max-width: $container-width) {
+    @content;
+  }
+}
+
+
+/// Add styles which only apply if the screen is the smallest
+@mixin until-smallest-screen {
+  @media (max-width: $smallest-screen) {
     @content;
   }
 }

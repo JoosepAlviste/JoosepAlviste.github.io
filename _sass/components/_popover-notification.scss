@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the popover notification component.
+// -----------------------------------------------------------------------------
+@import '../abstracts/all';
+
+.popover-notification {
+  position: absolute;
+  right: -1.5rem;
+  top:   -1.5rem;
+
+  font-size: 1rem;
+
+  animation: fadeUp $animation-duration-long ease-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
