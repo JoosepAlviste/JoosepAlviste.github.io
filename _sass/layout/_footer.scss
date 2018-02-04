@@ -4,6 +4,12 @@
 @import '../abstracts/all';
 
 
+$footer-icon-padding: 13px;
+$footer-icon-color: rgba(255, 255, 255, 0.6);
+$footer-icon-hover-color: rgba(255, 255, 255, 1);
+$footer-icon-hover-zoom: 1.1;
+
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -30,36 +36,55 @@
     }
   }
 
+  .footer__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__icon-container {
+    padding-left: $footer-icon-padding;
+    padding-right: $footer-icon-padding;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
   .footer__icon-link {
+    display: block;
     border-bottom: none;
   }
 
   .footer__icon {
-    fill: rgba(255, 255, 255, .6);
+    fill: $footer-icon-color;
   }
 
   .footer__icon--copy {
-    transition: all .2s ease-in;
+    transition: all $animation-duration-short ease-in;
     cursor: pointer;
 
     &:hover {
-      fill: rgba(255, 255, 255, 1);
+      fill: $footer-icon-hover-color;
     }
   }
 
-  .footer__icon--github {
-    transition: all .2s ease-in;
+  .footer__icon--hover-zoom {
+    transition: all $animation-duration-short ease-in;
 
     > g {
-      fill: rgba(255, 255, 255, .6);
-      transition: all .2s ease-in;
+      fill: $footer-icon-color;
+      transition: all $animation-duration-short ease-in;
     }
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale($footer-icon-hover-zoom);
 
       > g {
-        fill: rgba(255, 255, 255, 1);
+        fill: $footer-icon-hover-color;
       }
     }
   }

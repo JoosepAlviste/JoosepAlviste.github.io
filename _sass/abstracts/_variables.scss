@@ -53,9 +53,6 @@ $wider-than-container-size: 40px;
 
 $column-gap: 10px;
 
-$icon-size: 23px;
-$icon-size-large: 40px;
-
 $modal-width: 90%;
 $modal-outer-padding: 8vh;
 $modal-inner-padding: 1rem;
@@ -72,4 +69,5 @@ $smallest-screen: 375px;
 
 /*----------- Animation -----------*/
 
+$animation-duration-short: 250ms;
 $animation-duration-long: 750ms;

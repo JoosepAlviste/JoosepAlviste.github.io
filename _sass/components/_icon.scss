@@ -4,6 +4,11 @@
 @import '../abstracts/all';
 
 
+$icon-size: 23px;
+$icon-size-medium: 33px;
+$icon-size-large: 40px;
+
+
 .icon {
   height: $icon-size;
   width: $icon-size;
@@ -12,4 +17,15 @@
   .icon--large {
     height: $icon-size-large;
     width: $icon-size-large;
+  }
+
+  .icon--medium {
+    height: $icon-size-medium;
+    width: $icon-size-medium;
+  }
+
+  .icon--cv {
+    display: block;
+    height: 25px;
+    width: 50px;
   }
