@@ -2,7 +2,7 @@ var modal = new tingle.modal({
     footer: false,
     stickyFooter: false,
     closeMethods: ['overlay', 'escape'],
-})
+});
 
 var registerImgClickListeners = function () {
     var $imgs = document.querySelectorAll('img[src]');
@@ -16,7 +16,7 @@ var registerImgClickListeners = function () {
             openModal(imgUrl, altText);
         });
     });
-}
+};
 
 var openModal = function (imgUrl, alt) {
     modal.setContent('<img src="' + imgUrl + '"/><p>' + alt + '</p>');
@@ -28,7 +28,7 @@ var openModal = function (imgUrl, alt) {
 
         document.querySelector('.tingle-modal').scrollTop = 0;
     }, 100);
-}
+};
 
 var registerModalClickListeners = function () {
     var $modal = document.querySelector('.tingle-modal');
@@ -36,9 +36,9 @@ var registerModalClickListeners = function () {
     $modal.addEventListener('click', function (e) {
         modal.close();
     });
-}
+};
 
 window.onload = function () {
     registerImgClickListeners();
     registerModalClickListeners();
-}
+};

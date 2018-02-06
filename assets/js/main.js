@@ -1,3 +1,9 @@
+/**
+ * Copy the given text to clipboard.
+ *
+ * @param {string} text
+ * @returns {boolean}
+ */
 var copyText = function (text) {
     var textArea = document.createElement('textarea');
 
@@ -17,18 +23,15 @@ var copyText = function (text) {
     document.body.appendChild(textArea);
     textArea.select();
 
-    var message;
     try {
         var successful = document.execCommand('copy');
         document.body.removeChild(textArea);
 
         return successful;
     } catch (err) {
-        message = 'Unable to copy';
-
         return false;
     }
-}
+};
 
 var onCopyButtonClick = function (e) {
     var $clickTargetNode = e.currentTarget;
@@ -49,14 +52,14 @@ var onCopyButtonClick = function (e) {
     } else {
 
     }
-}
+};
 
 var registerCopyButtonListeners = function () {
     var $copyButtons = document.querySelectorAll('.js-copy-button');
     $copyButtons.forEach(function ($button) {
         $button.addEventListener('click', onCopyButtonClick);
     });
-}
+};
 
 document.addEventListener('DOMContentLoaded', function () {
     registerCopyButtonListeners();

@@ -6,11 +6,11 @@
 
     <div class="project-section__container">
 
-        <h3 class="project-section__title" id="{{ include.project.slug }}">
+        <h2 class="project-section__title" id="{{ include.project.slug }}">
             <a href="{{ include.project.permalink }}">
                 {{ include.project.title }}
             </a>
-        </h3>
+        </h2>
 
         <div class="columns">
             <div class="column  project-section__tags">
@@ -24,7 +24,7 @@
             <div class="column  project-section__content">
                 {{ include.project.excerpt | markdownify }}
 
-                <a href="/{{ include.project.slug }}">More...</a>
+                <a href="/{{ include.project.slug }}/">More...</a>
             </div>
         </div>
 
