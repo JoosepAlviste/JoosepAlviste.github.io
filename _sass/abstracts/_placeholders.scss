@@ -1,6 +1,9 @@
-/*=============================================>>>>>
-= Placeholders =
-===============================================>>>>>*/
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass placeholders
+// -----------------------------------------------------------------------------
+@import 'variables';
+@import 'mixins';
+
 
 $wider-than-container-breakpoint: $container-width + ($wider-than-container-size * 2);
 
@@ -36,7 +39,3 @@ $wider-than-container-breakpoint: $container-width + ($wider-than-container-size
     padding-right: $column-gap;
   }
 }
-
-
-/*= End of Placeholders =*/
-/*=============================================<<<<<*/

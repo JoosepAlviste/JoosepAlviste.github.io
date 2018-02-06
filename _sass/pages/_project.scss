@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the Project page.
 // -----------------------------------------------------------------------------
+@import '../abstracts/all';
 
 
 @each $project, $color in $projects {

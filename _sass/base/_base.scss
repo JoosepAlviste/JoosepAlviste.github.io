@@ -1,3 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains the base styles for every page
+// -----------------------------------------------------------------------------
+@import '../abstracts/all';
+
+
 body {
   background: $body-background;
 }
