@@ -59,7 +59,7 @@ I use Travis CI to automatically run tests every time I commit something.
 The results for the tests are sent to Codecov so that code coverage and 
 other test related statistics can be viewed there. If these tests pass,
 the deployment process is triggered, which uses SSH to log into the 
-Docker droplet, executes a Git pull in the project folder and runs 
+DigitalOcean droplet, executes a Git pull in the project folder and runs 
 database migrations.
 
 
