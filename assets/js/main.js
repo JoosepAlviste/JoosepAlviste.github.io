@@ -61,6 +61,10 @@ var registerCopyButtonListeners = function () {
     });
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+if (document.readyState !== 'loading') {
     registerCopyButtonListeners();
-});
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        registerCopyButtonListeners();
+    });
+}
