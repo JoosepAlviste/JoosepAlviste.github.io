@@ -6,7 +6,16 @@
   transition: all $animation-duration $easing;
 
   &:hover {
-    transform: scale(1.1);
     fill: rgba(255, 255, 255, 1);
+  }
+
+  &.IsInline {
+    display: inline;
+  }
+
+  &.HasHoverScale {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

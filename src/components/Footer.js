@@ -3,12 +3,14 @@ import React from 'react'
 import GitHubIcon from './GitHubIcon'
 import LinkedInIcon from './LinkedInIcon'
 import CVIcon from './CVIcon'
+import CopyButton from './CopyButton'
 import styles from './Footer.module.scss'
 
 const Footer = () => (
   <div className={styles.Footer}>
     <div className={styles.Text}>
       <span>joosep.alviste@gmail.com</span>
+      <CopyButton text="joosep.alviste@gmail.com" />
     </div>
 
     <div className={styles.Icons}>
