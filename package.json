@@ -5,10 +5,20 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "gatsby": "^1.9.238",
-    "gatsby-link": "^1.6.39"
+    "gatsby-link": "^1.6.39",
+    "react": "latest"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "1.11.1"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }
