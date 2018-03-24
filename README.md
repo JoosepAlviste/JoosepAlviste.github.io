@@ -7,9 +7,11 @@ migrating from Jekyll to Gatsby.
 
 ## Set up
 
-Install dependencies:
-
 ```bash
+# Clone
+git clone https://github.com/JoosepAlviste/JoosepAlviste.github.io.git -b gatsby-migration
+
+# Install dependencies
 yarn
 ```
 
