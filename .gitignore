@@ -63,3 +63,6 @@ yarn-error.log
 
 # IDE
 .idea/
+
+# NPM package lock (this project uses Yarn)
+package-lock.json
