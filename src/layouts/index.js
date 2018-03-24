@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../styles/app.scss'
+import '../styles/main.scss'
 
 const Index = ({ children }) => <div>{children()}</div>
 
