@@ -4,3 +4,14 @@ body {
   margin: 0;
   background: $body-background;
 }
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

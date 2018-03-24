@@ -1,9 +1,16 @@
 /*----------- Typography -----------*/
 
 $body-font: 'Roboto Mono', monospace;
+$body-font-size: 16px;
+
+$font-weight-regular: 400;
+
+$heading-font: 'Lato', sans-serif;
+$heading-font-size: 2rem;
+$subheading-font-size: 1.75rem;
 
 
 /*----------- Colors -----------*/
 
-$body-background: hsl(0, 0, 0);
-$body-color: hsl(255, 255, 255);
+$body-background: rgb(0, 0, 0);
+$body-color: rgb(255, 255, 255);
