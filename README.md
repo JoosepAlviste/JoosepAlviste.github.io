@@ -1,10 +1,22 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site
+# My Portfolio Site
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
+[https://joosep.xyz](https://joosep.xyz)
+
+My portfolio for displaying my notable projects. Currently in the process of
+migrating from Jekyll to Gatsby.
+
+## Set up
+
+Install dependencies:
+
+```bash
+yarn
 ```
 
-## Running in development
-`gatsby develop`
+## Start
+
+Start the development server:
+
+```
+yarn develop
+```
