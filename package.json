@@ -12,6 +12,7 @@
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-sass": "^1.0.24",
+    "prop-types": "^15.6.1",
     "react": "latest"
   },
   "devDependencies": {
