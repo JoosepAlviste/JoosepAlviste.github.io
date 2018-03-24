@@ -1,0 +1,27 @@
+import React from 'react'
+
+import styles from './Footer.module.scss'
+
+const Footer = () => (
+  <div className={styles.Footer}>
+    <div className={styles.Text}>
+      <span>joosep.alviste@gmail.com</span>
+    </div>
+
+    <div className={styles.Icons}>
+      <div className={styles.Icon}>
+        <a href="/">CV</a>
+      </div>
+
+      <div className={styles.Icon}>
+        <a href="https://github.com/JoosepAlviste">GitHub</a>
+      </div>
+
+      <div className={styles.Icon}>
+        <a href="https://www.linkedin.com/in/joosep-alviste/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+)
+
+export default Footer
