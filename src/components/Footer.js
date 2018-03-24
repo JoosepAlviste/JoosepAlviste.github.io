@@ -1,6 +1,7 @@
 import React from 'react'
 
 import GitHubIcon from './GitHubIcon'
+import LinkedInIcon from './LinkedInIcon'
 import styles from './Footer.module.scss'
 
 const Footer = () => (
@@ -21,7 +22,9 @@ const Footer = () => (
       </div>
 
       <div className={styles.Icon}>
-        <a href="https://www.linkedin.com/in/joosep-alviste/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/joosep-alviste/">
+          <LinkedInIcon />
+        </a>
       </div>
     </div>
   </div>
