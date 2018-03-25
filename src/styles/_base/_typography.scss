@@ -31,4 +31,14 @@ a {
   &:hover {
     color: $primary-color;
   }
+
+  @each $project, $color in $projects {
+    [data-project='#{$project}'] & {
+      border-bottom-color: $color;
+
+      &:hover {
+        color: $color;
+      }
+    }
+  }
 }
