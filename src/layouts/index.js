@@ -33,6 +33,8 @@ export const query = graphql`
     site {
       siteMetadata {
         email
+        gitHubLink
+        linkedInLink
       }
     }
   }
