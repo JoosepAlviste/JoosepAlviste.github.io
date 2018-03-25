@@ -21,6 +21,12 @@ tags:
     - continuous-integration
 ---
 
+<div class="wider-than-container">
+
+![Charon](img/charon.png)
+
+</div>
+
 ## TL;DR
 
 * Back-end: PHP, Laravel

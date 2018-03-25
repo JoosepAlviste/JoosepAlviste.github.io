@@ -11,7 +11,10 @@ const Project = ({ data }) => {
 
   return (
     <article className={styles.Project} data-project={projectSlug}>
-      <h1>{project.frontmatter.title}</h1>
+      <header>
+        <h1 className={styles.Title}>{project.frontmatter.title}</h1>
+      </header>
+
       <Container>
         <div dangerouslySetInnerHTML={{ __html: project.html }} />
       </Container>

@@ -18,6 +18,25 @@
       img {
         border-bottom-color: $color;
       }
+
+      .Title::after {
+        border-bottom-color: $color;
+      }
     }
+  }
+}
+
+.Title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 3px solid;
+    width: 1em;
+    margin: 15px auto;
   }
 }
