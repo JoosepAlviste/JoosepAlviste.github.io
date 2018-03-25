@@ -1,0 +1,25 @@
+// Small global helper classes (can be used in markdown)
+
+@import '../_abstracts/all';
+
+.wider-than-container {
+  @include wider-than-container;
+}
+
+.columns {
+  display: flex;
+}
+
+  .column {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }

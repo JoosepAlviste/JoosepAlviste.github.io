@@ -1,0 +1,23 @@
+@import '../styles/_abstracts/all';
+
+.Project {
+  h2 {
+    @include wider-than-container;
+
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    box-sizing: border-box;  /* keep larger margin between images */
+    border-bottom: 8px solid;
+  }
+
+  @each $project, $color in $projects {
+    &[data-project='#{$project}'] {
+      img {
+        border-bottom-color: $color;
+      }
+    }
+  }
+}

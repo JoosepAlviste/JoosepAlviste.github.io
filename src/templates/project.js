@@ -2,14 +2,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Container from '../components/Container'
+import styles from './project.module.scss'
+
 const Project = ({ data }) => {
   const project = data.markdownRemark
+  const projectSlug = project.frontmatter.title.toLowerCase().replace(/ /, '-')
 
   return (
-    <div>
+    <article className={styles.Project} data-project={projectSlug}>
       <h1>{project.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: project.html }} />
-    </div>
+      <Container>
+        <div dangerouslySetInnerHTML={{ __html: project.html }} />
+      </Container>
+    </article>
   )
 }
 

@@ -86,19 +86,19 @@ process is automated.
 
 ## Screenshots
 
-<div class="columns">
+<div class="columns wider-than-container">
 <div class="column">
 
-![Charon instance creation form minimal](/assets/img/charon-instance-form-minimal.png)
+![Charon instance creation form minimal](img/charon-instance-form-minimal.png)
 
-![Grading view for teachers](/assets/img/charon-popup-grading-view.png)
+![Grading view for teachers](img/charon-popup-grading-view.png)
 
 </div>
 <div class="column">
 
-![Charon instance creation form advanced](/assets/img/charon-instance-form-advanced.png)
+![Charon instance creation form advanced](img/charon-instance-form-advanced.png)
 
-![One submission view for teachers](/assets/img/charon-popup-submission-view.png)
+![One submission view for teachers](img/charon-popup-submission-view.png)
 
 </div>
 </div>
