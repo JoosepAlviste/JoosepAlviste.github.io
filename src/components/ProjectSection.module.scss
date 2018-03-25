@@ -35,14 +35,11 @@
 
 .Tags {
   flex: 1;
-  margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
   padding-right: 15px;
   border-right: 3px solid;
 
   text-align: right;
-  list-style: none;
 
   @each $project, $color in $projects {
     [data-project='#{$project}'] & {
