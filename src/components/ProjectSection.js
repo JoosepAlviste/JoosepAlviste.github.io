@@ -18,7 +18,7 @@ const ProjectSection = ({ project }) => {
         </ul>
 
         <div className={styles.DescriptionContainer}>
-          <div dangerouslySetInnerHTML={{ __html: project.description }} />
+          <div dangerouslySetInnerHTML={{ __html: project.excerpt }} />
 
           <a href="/">More...</a>
         </div>
@@ -31,7 +31,7 @@ ProjectSection.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
   }).isRequired,
 }
 

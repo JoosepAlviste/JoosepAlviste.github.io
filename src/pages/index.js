@@ -1,73 +1,61 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import ProjectSection from '../components/ProjectSection'
 
-const charon = {
-  title: 'Charon',
-  tags: [
-    'back-end',
-    'front-end',
-    'php',
-    'laravel',
-    'javascript',
-    'vuejs',
-    'continuous-integration',
-  ],
-  description: `<p>
-      Integrating Moodle LMS with an automated tester for testing students'
-      solutions to programming tasks. User interface for grading students.
-      Automated build process.
-    </p>
-    <p>Actively used in Tallinn University of Technology since January 2017.</p>`,
-}
-const virtualObservatory = {
-  title: 'Virtual observatory',
-  tags: [
-    'back-end',
-    'front-end',
-    'php',
-    'laravel',
-    'javascript',
-    'vuejs',
-    'continuous-integration',
-  ],
-  description: `<p>
-    Integrating Moodle LMS with an automated tester for testing students'
-    solutions to programming tasks. User interface for grading students.
-    Automated build process.
-  </p>
-  <p>Actively used in Tallinn University of Technology since January 2017.</p>`,
-}
-const serieslist = {
-  title: 'Serieslist',
-  tags: [
-    'back-end',
-    'front-end',
-    'php',
-    'laravel',
-    'javascript',
-    'vuejs',
-    'continuous-integration',
-  ],
-  description: `<p>
-    Integrating Moodle LMS with an automated tester for testing students'
-    solutions to programming tasks. User interface for grading students.
-    Automated build process.
-  </p>
-  <p>Actively used in Tallinn University of Technology since January 2017.</p>`,
+const Index = ({ data }) => {
+  const projects = data.allMarkdownRemark.edges
+    .map(edge => edge.node.frontmatter)
+    .sort((a, b) => a.order > b.order)
+
+  return (
+    <div>
+      <h1>Charon</h1>
+      <h2>Another test title!</h2>
+
+      <p>Hello world!</p>
+
+      {projects.map(project => (
+        <ProjectSection key={project.title} project={project} />
+      ))}
+    </div>
+  )
 }
 
-const Index = () => (
-  <div>
-    <h1>Charon</h1>
-    <h2>Another test title!</h2>
+Index.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontMatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              order: PropTypes.number.isRequired,
+              excerpt: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+            }).isRequired,
+          }).isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
-    <p>Hello world!</p>
-
-    <ProjectSection project={charon} />
-    <ProjectSection project={virtualObservatory} />
-    <ProjectSection project={serieslist} />
-  </div>
-)
+export const query = graphql`
+  query IndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            order
+            excerpt
+            tags
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Index
