@@ -17,6 +17,7 @@
     "gatsby-remark-images": "^1.5.59",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
+    "npm": "^5.8.0",
     "prop-types": "^15.6.1",
     "react": "latest"
   },
@@ -33,6 +34,9 @@
     "prettier": "1.11.1"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
