@@ -32,7 +32,6 @@ ProjectSection.propTypes = {
     title: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
   }).isRequired,
 }
 
