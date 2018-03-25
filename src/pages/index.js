@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ProjectSection from '../components/ProjectSection'
+import Container from '../components/Container'
 
 const Index = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
@@ -15,9 +16,11 @@ const Index = ({ data }) => {
 
       <p>Hello world!</p>
 
-      {projects.map(project => (
-        <ProjectSection key={project.title} project={project} />
-      ))}
+      <Container>
+        {projects.map(project => (
+          <ProjectSection key={project.title} project={project} />
+        ))}
+      </Container>
     </div>
   )
 }
@@ -33,7 +36,7 @@ Index.propTypes = {
               order: PropTypes.number.isRequired,
               excerpt: PropTypes.string.isRequired,
               tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-            }).isRequired,
+            }),
           }).isRequired,
         }).isRequired
       ).isRequired,
