@@ -12,6 +12,7 @@ const Icon = ({
   inline,
   hoverScale,
   className,
+  onClick,
 }) => (
   <svg
     className={`${styles.Icon} ${inline && styles.IsInline} ${hoverScale &&
@@ -19,6 +20,7 @@ const Icon = ({
     viewBox={viewBox || null}
     width={width}
     height={height}
+    onClick={onClick}
   >
     {title && <title>{title}</title>}
     {children}
@@ -34,6 +36,7 @@ Icon.propTypes = {
   inline: PropTypes.bool,
   hoverScale: PropTypes.bool,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 Icon.defaultProps = {
@@ -44,6 +47,7 @@ Icon.defaultProps = {
   inline: false,
   hoverScale: false,
   className: '',
+  onClick: () => null,
 }
 
 export default Icon
