@@ -13,6 +13,8 @@
           color: $color;
         }
       }
+
+      @include selection($color);
     }
   }
 }

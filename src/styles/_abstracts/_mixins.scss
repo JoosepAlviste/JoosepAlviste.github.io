@@ -1,0 +1,9 @@
+/// Recolors the selection inside this element. Also lightens it to try to
+/// Negate the opacity change.
+///
+/// @param {Color} $color - The color of the highlight
+@mixin selection($color) {
+  ::selection {
+    background: lighten($color, 15%);
+  }
+}
