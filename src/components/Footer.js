@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import GitHubIcon from './GitHubIcon'
 import LinkedInIcon from './LinkedInIcon'
@@ -6,11 +7,11 @@ import CVIcon from './CVIcon'
 import CopyButton from './CopyButton'
 import styles from './Footer.module.scss'
 
-const Footer = () => (
+const Footer = ({ email }) => (
   <div className={styles.Footer}>
     <div className={styles.Text}>
-      <span>joosep.alviste@gmail.com</span>
-      <CopyButton text="joosep.alviste@gmail.com" />
+      <span>{email}</span>
+      <CopyButton text={email} />
     </div>
 
     <div className={styles.Icons}>
@@ -34,5 +35,9 @@ const Footer = () => (
     </div>
   </div>
 )
+
+Footer.propTypes = {
+  email: PropTypes.string.isRequired,
+}
 
 export default Footer

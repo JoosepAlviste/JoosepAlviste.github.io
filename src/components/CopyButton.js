@@ -10,7 +10,7 @@ class CopyButton extends React.Component {
     super()
 
     this.state = {
-      showCopiedNotification: true,
+      showCopiedNotification: false,
     }
 
     this.handleClick = this.handleClick.bind(this)

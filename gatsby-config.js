@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    email: 'joosep.alviste@gmail.com',
+  },
   plugins: [
     'gatsby-plugin-sass',
     {
