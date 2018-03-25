@@ -6,8 +6,8 @@ import Container from '../components/Container'
 
 const Index = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
-    .map(edge => edge.node.frontmatter)
-    .sort((a, b) => a.order > b.order)
+    .map(edge => edge.node)
+    .sort((a, b) => a.frontmatter.order > b.frontmatter.order)
 
   return (
     <div>
@@ -54,6 +54,9 @@ export const query = graphql`
             order
             excerpt
             tags
+          }
+          fields {
+            slug
           }
         }
       }
