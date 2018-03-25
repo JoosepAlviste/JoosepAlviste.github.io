@@ -1,5 +1,37 @@
+@import '../styles/_abstracts/all';
+
 .CopyButton {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left:  10px;
+  padding-right: 10px;
   cursor: pointer;
+}
+
+.CopyButtonContainer {
+  position: relative;
+}
+
+.CopiedNotification {
+  position: absolute;
+  font-size: 1rem;
+  top: -1.5rem;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+
+  animation: fadeUp $animation-duration-long ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-50%, -20px, 0);
+    opacity: 0;
+  }
 }
