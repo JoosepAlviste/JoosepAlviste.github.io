@@ -5,9 +5,7 @@ import ProjectSection from '../components/ProjectSection'
 import Container from '../components/Container'
 
 const Index = ({ data }) => {
-  const projects = data.allMarkdownRemark.edges
-    .map(edge => edge.node)
-    .sort((a, b) => a.frontmatter.order > b.frontmatter.order)
+  const projects = data.allMarkdownRemark.edges.map(edge => edge.node)
 
   return (
     <div>
@@ -46,7 +44,7 @@ Index.propTypes = {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
       edges {
         node {
           frontmatter {
