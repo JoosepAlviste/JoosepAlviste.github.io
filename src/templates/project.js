@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Container from '../components/Container'
+import FloatingBackButton from '../components/FloatingBackButton'
 import styles from './project.module.scss'
 
 const Project = ({ data }) => {
@@ -11,6 +12,8 @@ const Project = ({ data }) => {
 
   return (
     <article className={styles.Project} data-project={projectSlug}>
+      <FloatingBackButton />
+
       <header>
         <h1 className={styles.Title}>{project.frontmatter.title}</h1>
       </header>
