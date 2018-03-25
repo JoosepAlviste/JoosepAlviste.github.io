@@ -5,6 +5,14 @@ module.exports = {
     linkedInLink: 'https://www.linkedin.com/in/joosep-alviste/',
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`,
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-google-fonts',
