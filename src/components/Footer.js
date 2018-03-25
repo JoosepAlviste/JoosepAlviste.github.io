@@ -7,7 +7,7 @@ import CVIcon from './CVIcon'
 import CopyButton from './CopyButton'
 import styles from './Footer.module.scss'
 
-const Footer = ({ email }) => (
+const Footer = ({ email, gitHubLink, linkedInLink }) => (
   <div className={styles.Footer}>
     <div className={styles.Text}>
       <span>{email}</span>
@@ -22,13 +22,13 @@ const Footer = ({ email }) => (
       </div>
 
       <div className={styles.Icon}>
-        <a href="https://github.com/JoosepAlviste">
+        <a href={gitHubLink}>
           <GitHubIcon />
         </a>
       </div>
 
       <div className={styles.Icon}>
-        <a href="https://www.linkedin.com/in/joosep-alviste/">
+        <a href={linkedInLink}>
           <LinkedInIcon />
         </a>
       </div>
@@ -38,6 +38,8 @@ const Footer = ({ email }) => (
 
 Footer.propTypes = {
   email: PropTypes.string.isRequired,
+  gitHubLink: PropTypes.string.isRequired,
+  linkedInLink: PropTypes.string.isRequired,
 }
 
 export default Footer

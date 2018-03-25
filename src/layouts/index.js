@@ -7,7 +7,11 @@ import '../styles/main.scss'
 const Index = ({ children, data }) => (
   <div>
     {children()}
-    <Footer email={data.site.siteMetadata.email} />
+    <Footer
+      email={data.site.siteMetadata.email}
+      gitHubLink={data.site.siteMetadata.gitHubLink}
+      linkedInLink={data.site.siteMetadata.linkedInLink}
+    />
   </div>
 )
 
@@ -15,8 +19,12 @@ Index.propTypes = {
   children: PropTypes.func.isRequired,
   data: PropTypes.shape({
     site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({ email: PropTypes.string.isRequired }),
-    }),
+      siteMetadata: PropTypes.shape({
+        email: PropTypes.string.isRequired,
+        gitHubLink: PropTypes.string.isRequired,
+        linkedInLink: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
 }
 
