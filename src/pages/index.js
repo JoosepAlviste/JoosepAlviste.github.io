@@ -14,11 +14,11 @@ const charon = {
     'continuous-integration',
   ],
   description: `<p>
-    Integrating Moodle LMS with an automated tester for testing students'
-    solutions to programming tasks. User interface for grading students.
-    Automated build process.
-  </p>
-  <p>Actively used in Tallinn University of Technology since January 2017.</p>`,
+      Integrating Moodle LMS with an automated tester for testing students'
+      solutions to programming tasks. User interface for grading students.
+      Automated build process.
+    </p>
+    <p>Actively used in Tallinn University of Technology since January 2017.</p>`,
 }
 const virtualObservatory = {
   title: 'Virtual observatory',

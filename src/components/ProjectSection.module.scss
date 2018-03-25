@@ -3,12 +3,28 @@
 .ProjectSection {
   padding-top: 120px;
   padding-bottom: 70px;
+
+  @each $project, $color in $projects {
+    &[data-project='#{$project}'] {
+      a {
+        border-bottom-color: $color;
+
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+  }
 }
 
 .Title {
   margin-bottom: 1rem;
   font-size: 4rem;
   text-align: center;
+
+  a {
+    border-bottom: none;
+  }
 }
 
 .ContentContainer {
@@ -25,6 +41,12 @@
 
   text-align: right;
   list-style: none;
+
+  @each $project, $color in $projects {
+    [data-project='#{$project}'] & {
+      border-right-color: $color;
+    }
+  }
 }
 
 .DescriptionContainer {
