@@ -20,6 +20,12 @@ tags:
     - vuejs
 ---
 
+<div class="wider-than-container">
+
+![Serieslist](img/serieslist.png)
+
+</div>
+
 ## TL;DR
 
 * Back-end: PHP, Laravel
@@ -60,21 +66,21 @@ database migrations.
 
 ## Screenshots
 
-<div class="columns">
+<div class="columns wider-than-container">
 <div class="column">
 
-![List of all the series](/assets/img/serieslist-series-list.png)
+![List of all the series](img/serieslist-series-list.png)
 
-![My list view showing in progress series](/assets/img/serieslist-my-list.png)
+![My list view showing in progress series](img/serieslist-my-list.png)
 
 </div>
 <div class="column">
 
-![One series view](/assets/img/serieslist-series.png)
+![One series view](img/serieslist-series.png)
 
-![Search for series or episodes view](/assets/img/serieslist-search.png)
+![Search for series or episodes view](img/serieslist-search.png)
 
-![Series edit view](/assets/img/serieslist-edit.png)
+![Series edit view](img/serieslist-edit.png)
 
 </div>
 </div>

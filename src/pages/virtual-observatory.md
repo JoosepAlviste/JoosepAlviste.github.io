@@ -16,6 +16,12 @@ tags:
     - vuejs
 ---
 
+<div class="wider-than-container">
+
+![Virtual Observatory](img/virtual-observatory.png)
+
+</div>
+
 ## TL;DR
 
 * JavaScript
@@ -46,14 +52,14 @@ and different information is required at different times.
 <div class="columns">
 <div class="column">
 
-![Virtual observatory](/assets/img/virtual-observatory.png)
+![Virtual observatory](img/virtual-observatory.png)
 
-![Tutorials page](/assets/img/virtual-observatory-tutorials.png)
+![Tutorials page](img/virtual-observatory-tutorials.png)
 
 </div>
 <div class="column">
 
-![Closed sidebar and large plots](/assets/img/virtual-observatory-large.png)
+![Closed sidebar and large plots](img/virtual-observatory-large.png)
 
 </div>
 </div>
