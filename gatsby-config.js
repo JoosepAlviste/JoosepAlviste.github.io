@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
+    siteUrl: 'https://joosep.xyz',
     email: 'joosep.alviste@gmail.com',
     gitHubLink: 'https://github.com/JoosepAlviste',
     linkedInLink: 'https://www.linkedin.com/in/joosep-alviste/',
@@ -69,5 +70,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
   ],
 }
