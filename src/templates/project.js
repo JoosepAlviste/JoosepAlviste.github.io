@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
 import Container from '../components/Container'
 import FloatingBackButton from '../components/FloatingBackButton'
@@ -12,6 +13,10 @@ const Project = ({ data }) => {
 
   return (
     <article className={styles.Project} data-project={projectSlug}>
+      <Helmet>
+        <title>{project.frontmatter.title} | Joosep Alviste</title>
+      </Helmet>
+
       <FloatingBackButton />
 
       <header className={styles.Header}>

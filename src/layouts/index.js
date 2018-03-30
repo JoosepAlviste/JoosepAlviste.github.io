@@ -1,12 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
 import Footer from '../components/Footer'
 import '../styles/main.scss'
 
 const Index = ({ children, data }) => (
   <div>
+    <Helmet>
+      <title>Joosep Alviste</title>
+    </Helmet>
+
     {children()}
+
     <Footer
       email={data.site.siteMetadata.email}
       gitHubLink={data.site.siteMetadata.gitHubLink}
