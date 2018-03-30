@@ -22,6 +22,8 @@
       .Title::after {
         border-bottom-color: $color;
       }
+
+      @include selection($color);
     }
   }
 }
