@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withPrefix } from 'gatsby-link'
 
 import GitHubIcon from './GitHubIcon'
 import LinkedInIcon from './LinkedInIcon'
 import CVIcon from './CVIcon'
 import CopyButton from './CopyButton'
 import styles from './Footer.module.scss'
-import cv from '../files/CV Joosep Alviste.pdf'
 
 const Footer = ({ email, gitHubLink, linkedInLink }) => (
   <div className={styles.Footer}>
@@ -17,7 +17,11 @@ const Footer = ({ email, gitHubLink, linkedInLink }) => (
 
     <div className={styles.Icons}>
       <div className={styles.Icon}>
-        <a href={cv} target="_blank" rel="noopener referrer">
+        <a
+          href={withPrefix('/files/CV Joosep Alviste.pdf')}
+          target="_blank"
+          rel="noopener referrer"
+        >
           <CVIcon />
         </a>
       </div>

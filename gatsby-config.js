@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     email: 'joosep.alviste@gmail.com',
     gitHubLink: 'https://github.com/JoosepAlviste',
