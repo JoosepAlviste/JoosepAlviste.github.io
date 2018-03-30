@@ -2,4 +2,9 @@
 .idea
 _site
 .DS_Store
+.cache
+node_modules
+package-lock.json
+public
+yarn-error.log
 
