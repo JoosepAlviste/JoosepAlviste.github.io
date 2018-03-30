@@ -1,21 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 
 import Footer from '../components/Footer'
 import '../styles/main.scss'
+import Head from '../components/Head'
 
 const Index = ({ children, data }) => (
   <div>
-    <Helmet
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-      defaultTitle={data.site.siteMetadata.title}
-    >
-      <html lang="en" dir="ltr" />
-      <meta name="description" content={data.site.siteMetadata.description} />
-    </Helmet>
+    <Head
+      siteTitle={data.site.siteMetadata.title}
+      siteDescription={data.site.siteMetadata.description}
+    />
 
-    {children()}
+    <main aria-label="Content">{children()}</main>
 
     <Footer
       email={data.site.siteMetadata.email}
