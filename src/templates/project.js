@@ -14,7 +14,7 @@ const Project = ({ data }) => {
     <article className={styles.Project} data-project={projectSlug}>
       <FloatingBackButton />
 
-      <header>
+      <header className={styles.Header}>
         <h1 className={styles.Title}>{project.frontmatter.title}</h1>
       </header>
 

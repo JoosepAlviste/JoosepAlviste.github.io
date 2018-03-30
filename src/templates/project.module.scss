@@ -26,11 +26,15 @@
   }
 }
 
+.Header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .Title {
   font-size: 3rem;
   text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 
   &::after {
     display: block;

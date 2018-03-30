@@ -1,5 +1,9 @@
 @import '../_abstracts/_all.scss';
 
+html {
+  background: $body-background-gradient-top;
+}
+
 body {
   margin: 0;
   background: $body-background;

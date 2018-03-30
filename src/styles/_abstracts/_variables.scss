@@ -12,7 +12,10 @@ $subheading-font-size: 1.75rem;
 
 /*----------- Colors -----------*/
 
-$body-background: rgb(0, 0, 0);
+$body-background-gradient-top: rgb(0, 27, 65);
+$body-background-gradient-bottom: rgb(0, 0, 0);
+$body-background: linear-gradient($body-background-gradient-top, $body-background-gradient-bottom);
+
 $body-color: rgb(255, 255, 255);
 
 $primary-color: rgb(89, 193, 230);
