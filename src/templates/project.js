@@ -14,9 +14,7 @@ const Project = ({ data }) => {
   return (
     <article className={styles.Project} data-project={projectSlug}>
       <Helmet>
-        <title>
-          {project.frontmatter.title} | {data.site.siteMetadata.title}
-        </title>
+        <title>{project.frontmatter.title}</title>
       </Helmet>
 
       <FloatingBackButton />
@@ -40,11 +38,6 @@ Project.propTypes = {
       }),
       html: PropTypes.string.isRequired,
     }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
   }).isRequired,
 }
 
@@ -53,15 +46,6 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
-      }
-    }
-    site {
-      siteMetadata {
-        email
-        gitHubLink
-        linkedInLink
-        description
         title
       }
     }

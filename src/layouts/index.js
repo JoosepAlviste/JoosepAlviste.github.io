@@ -7,8 +7,11 @@ import '../styles/main.scss'
 
 const Index = ({ children, data }) => (
   <div>
-    <Helmet>
-      <title>{data.site.siteMetadata.title}</title>
+    <Helmet
+      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      defaultTitle={data.site.siteMetadata.title}
+    >
+      <html lang="en" dir="ltr" />
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
 
