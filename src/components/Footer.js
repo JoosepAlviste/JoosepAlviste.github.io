@@ -6,6 +6,7 @@ import LinkedInIcon from './LinkedInIcon'
 import CVIcon from './CVIcon'
 import CopyButton from './CopyButton'
 import styles from './Footer.module.scss'
+import cv from '../files/CV Joosep Alviste.pdf'
 
 const Footer = ({ email, gitHubLink, linkedInLink }) => (
   <div className={styles.Footer}>
@@ -16,7 +17,7 @@ const Footer = ({ email, gitHubLink, linkedInLink }) => (
 
     <div className={styles.Icons}>
       <div className={styles.Icon}>
-        <a href="/">
+        <a href={cv} target="_blank" rel="noopener referrer">
           <CVIcon />
         </a>
       </div>
