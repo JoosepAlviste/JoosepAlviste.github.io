@@ -10,8 +10,20 @@
   }
 }
 
+/// Add styles for responsiveness
+@mixin until-container {
+  @media (max-width: $container-width) {
+    @content
+  }
+}
+
 /// Makes the element slightly wider than the container.
 @mixin wider-than-container {
   margin-left: $wider-than-container-margin;
   margin-right: $wider-than-container-margin;
+
+  @include until-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

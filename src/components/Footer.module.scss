@@ -1,3 +1,5 @@
+@import '../styles/_abstracts/all';
+
 .Footer {
   padding: 10rem 0;
   text-align: center;
@@ -6,6 +8,10 @@
 .Text {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+
+  @include until-container {
+    font-size: 1rem;
+  }
 }
 
 .Icons {

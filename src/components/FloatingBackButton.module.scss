@@ -1,7 +1,16 @@
+@import '../styles/_abstracts/all';
+
 .BackButton {
   position: fixed;
   top: 40px;
   left: 50px;
   font-size: 1.5rem;
   border-bottom: none;
+  z-index: 2;
+
+  @include until-container {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
 }

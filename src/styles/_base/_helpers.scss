@@ -8,6 +8,10 @@
 
 .columns {
   display: flex;
+
+  @include until-container {
+    flex-direction: column;
+  }
 }
 
   .column {
@@ -20,6 +24,11 @@
     }
 
     &:last-of-type {
+      padding-right: 0;
+    }
+
+    @include until-container {
+      padding-left: 0;
       padding-right: 0;
     }
   }

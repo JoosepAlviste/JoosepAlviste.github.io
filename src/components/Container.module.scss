@@ -6,4 +6,9 @@
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+
+  @include until-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
