@@ -20,20 +20,20 @@ const Footer = ({ email, gitHubLink, linkedInLink }) => (
         <a
           href={withPrefix('/files/CV Joosep Alviste.pdf')}
           target="_blank"
-          rel="noopener referrer"
+          rel="noopener noreferrer"
         >
           <CVIcon />
         </a>
       </div>
 
       <div className={styles.Icon}>
-        <a href={gitHubLink}>
+        <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
           <GitHubIcon />
         </a>
       </div>
 
       <div className={styles.Icon}>
-        <a href={linkedInLink}>
+        <a href={linkedInLink} target="_blank" rel="noopener noreferrer">
           <LinkedInIcon />
         </a>
       </div>
