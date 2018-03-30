@@ -6,7 +6,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "@types/prop-types": "^15.5.2",
