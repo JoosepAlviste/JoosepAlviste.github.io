@@ -8,7 +8,7 @@ import '../styles/main.scss'
 const Index = ({ children, data }) => (
   <div>
     <Helmet>
-      <title>Joosep Alviste</title>
+      <title>{data.site.siteMetadata.title}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
 
@@ -31,6 +31,7 @@ Index.propTypes = {
         gitHubLink: PropTypes.string.isRequired,
         linkedInLink: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
@@ -44,6 +45,7 @@ export const query = graphql`
         gitHubLink
         linkedInLink
         description
+        title
       }
     }
   }
