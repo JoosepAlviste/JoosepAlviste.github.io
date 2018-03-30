@@ -9,6 +9,7 @@ const Index = ({ children, data }) => (
   <div>
     <Helmet>
       <title>Joosep Alviste</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
 
     {children()}
@@ -29,6 +30,7 @@ Index.propTypes = {
         email: PropTypes.string.isRequired,
         gitHubLink: PropTypes.string.isRequired,
         linkedInLink: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
@@ -41,6 +43,7 @@ export const query = graphql`
         email
         gitHubLink
         linkedInLink
+        description
       }
     }
   }

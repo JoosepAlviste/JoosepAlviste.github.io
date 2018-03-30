@@ -3,6 +3,8 @@ module.exports = {
     email: 'joosep.alviste@gmail.com',
     gitHubLink: 'https://github.com/JoosepAlviste',
     linkedInLink: 'https://www.linkedin.com/in/joosep-alviste/',
+    description:
+      'Joosep Alviste, web developer. Experienced in PHP, JavaScript, Laravel, Vue.js and SCSS.',
   },
   plugins: [
     {
