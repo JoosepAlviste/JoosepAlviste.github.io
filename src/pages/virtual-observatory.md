@@ -1,6 +1,6 @@
 ---
 title: Virtual Observatory
-order: 2
+order: 3
 
 excerpt: |
     <p>

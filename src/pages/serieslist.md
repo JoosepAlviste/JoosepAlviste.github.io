@@ -1,6 +1,6 @@
 ---
 title: Serieslist
-order: 3
+order: 2
 
 excerpt: |
     <p>
