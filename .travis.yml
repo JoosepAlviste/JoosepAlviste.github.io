@@ -2,11 +2,14 @@ language: node_js
 node_js:
   - "9"
 
+branches:
+  only:
+    - gatsby
 env:
   global:
     secure: ej0tkQpbua5sROT8Fis8F9COS3IqLvyqWOTcKaMleTKPBCTg2Cgcimd3pPK+00R6kQGdL/4SXzigpdz2K4OwK2uPdM9w0An3v9eQYbIQxbgaxvf8Fys4RgFEiNYZ0PuGMFBkQaUowwDZ/fiGGUJcroXSkcjBqp/FC9hVjp5oaMneOIRCeoHjlCLUpJOiyoc6ivL1MhIuSlQUbKDsTYhhsLaOY2nvoV2xFob44cvxWGxITz4WbDOB+e3miIrtUb+hyISrkKjKEIju0159hLD/yphDdSh507hVqTapiU0bMUTdSkx9TZ0ra+I0hBpmD3qd2n/JPn1EcPGUHjESYz45Z3onEEsYHHB3e6tRJB89uURUc0gzehenhAQdjnhZKqa/ahkX0saYFSc4+j6jmX7BX5rCxuGRCu2Wx6yBJeeGkZe3rOx3UrWorgVyeVbRnp8llvuPXGcFSdBaq+vKrlB5YGPGunEghcEVQCoOdFoVJ0+8M04DTv2sDYxak678oo0EwaWs1kHaGpG+Sukmhpe6e8jCK/Rj/rL2tQwmrM9lSHnohEmqm5TM8c4uQ1etx0DwoF5FFB1E4LhW13TuTwY+m+ZnKlc8enFhs7A/PfVrGnnNdLOzvsUjzY02vLFYUlPlMvu74Tj/vL9vMCAALRYpUQS6RdwJHhPHDpH4X/I5T4U=
 script:
-  - echo "Hello World"
+  - echo "No tests for this project!"
 before_deploy:
   - gatsby build
 deploy:
