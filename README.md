@@ -9,7 +9,7 @@ My portfolio for displaying my notable projects. Recently migrated to use
 
 ```bash
 # Clone the project
-git clone https://github.com/JoosepAlviste/JoosepAlviste.github.io.git -b gatsby
+git clone https://github.com/JoosepAlviste/JoosepAlviste.github.io.git
 
 # Install dependencies
 yarn
