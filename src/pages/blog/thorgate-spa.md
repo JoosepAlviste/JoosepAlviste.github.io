@@ -2,12 +2,14 @@
 title: Charon
 ---
 
-# SPA blog post - Getting started with ThorGate's SPA project template (???) 
+# SPA blog post - Getting started with Thorgate's SPA project template (???) 
 (using Django, React, Redux, Redux Saga, Razzle, Docker)
 
 
-Intro here - we at ThorGate have recently released a new version of our SPA 
+Intro here - we at Thorgate have recently released a new version of our SPA 
 template with Django, React, Redux and Redux Saga.
+
+**TODO: Why SPA & trends n stuff**
 
 Even if you don't start using our template, it's a good source of inspiration 
 for your own project set up.
@@ -43,6 +45,8 @@ There is more information in the [readme][].
 
 ## Getting up and running
 
+### Requirements
+
 There are a couple of pre-requisites for generating the project and running it. 
 We use Pipenv for managing Python dependencies and generating projects. If you 
 haven't used Pipenv before, then it is a really nice package manager for 
@@ -65,6 +69,13 @@ For reference, here are the versions of the packages I'm using:
 
     $ docker-compose --version
     docker-compose version 1.23.2, build unknown
+
+
+[pipenv-install]: 
+https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv
+
+
+### Generating the project
 
 Now that everything is set up, we can generate our project! Clone the project 
 template anywhere on your file system and make sure to clone the `spa` branch:
@@ -94,7 +105,7 @@ some questions about it:
     cookiecutter path/to/django-project-template
 
 
-![generating the project](generate-project.png)
+![generating the project](img/generate-project.png)
 
 I named my project Parrot-mania as it can be used to save notable parrots.
 
@@ -102,6 +113,8 @@ Now that the project has been generated, we can deactivate the
 `django-project-template` Pipenv environment since it only contains 
 `cookiecutter` and a few other packages. You can do this by just running 
 `exit`.
+
+### Running the generated project
 
 A `Makefile` is included in the new project with helpers for running common 
 commands. You don't need to know anything about `make` or `c`, they're just 
@@ -126,16 +139,12 @@ Now that the project is set up, we can run it through Docker and opening
     # or
     make docker
 
-![landing page](landing-page.png)
+![landing page](img/landing-page.png)
 
 Just like that we have set up a new project with a Django API, a React 
 front-end app with Redux and Redux Saga, server-side rendering using Razzle, 
 and a PostgreSQL database. Since all of these services are running in Docker 
 containers, we didn't need to install much locally.
-
-
-[pipenv-install]: 
-https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv
 
 
 ## Overview of the structure
@@ -169,7 +178,7 @@ The `app` directory includes these important files/directories:
 .
 ├── package.json
 ├── razzle.config.js  - Razzle's configuration file
-├── SPA.md  - more info about the client app's structure
+├── SPA.md  - more information about the client app's structure
 ├── public/
 └── src
     ├── components/  - standard React components
@@ -309,7 +318,7 @@ And let's migrate our database using aliases from the `Makefile`:
 
 Now we can add parrots through the Django admin!
 
-![creating a parrot](creating-a-parrot.png)
+![creating a parrot](img/creating-a-parrot.png)
 
 The next step is to create a page on the front-end where we will show the 
 parrots. At first, let's use some dummy data so that we can focus on just 
@@ -371,7 +380,7 @@ JavaScript for the page that the user is currently on.
 Now we can navigate to `http://127.0.0.1:8000/parrots` and see our example 
 parrots!
 
-![example parrots list](example-parrots-list.png)
+![example parrots list](img/example-parrots-list.png)
 
 This is a good time to make sure that our server-side rendering works, we can 
 `curl` the `/parrots` page:
@@ -504,26 +513,328 @@ export default withView()(ParrotsList);
 
 The problem here though, is that the parrots do not get server-rendered anymore 
 since they are fetched in `componentDidMount` -- when the component has been 
-rendered on the client side. In order to fix this, we can write our first Saga. 
-A saga listens to any dispatched Redux actions and can react to them -- for 
-example, dispatching more actions or making API requests. In our SPA projects, 
-all communication with the API goes through Sagas.
+rendered on the client side. In order to fix this, you can write your first 
+Saga. A saga listens to any dispatched Redux actions and can react to them -- 
+for example, dispatching more actions or making API requests. In our SPA 
+projects, all communication with the API goes through Sagas.
 
-* Set up `initial` saga with a hello world example
+The saga we will write will be very simple. It's going to be called whenever 
+anyone navigates to the `/parrots` route. In addition, it will be called on the 
+server whenever the user initially navigates to the `/parrots` route.
 
-We have a helper library for API requests called `tg-resources` (which uses 
-`fetch` or `superagent` under the hood). Using `tg-resources`, we can configure 
-a "resource" that can be used to easily make API calls.
+At first, let's just log something to the console so that we see that it's 
+working. Create a `app/src/sagas/parrots` directory and a `fetchUserParrots.js` 
+file inside it with the following contents (make sure not to miss the `*` next 
+to `function`).
 
-* Modify saga for fetching parrots
-* Create duck for hodling parrots
-* Pass parrots to ParrotList
+```
+export default function* fetchUserParrots() {
+    console.log('Fetching some parrots!');
+}
+```
+
+We also need to configure this saga to be triggered whenever users visit the 
+`/parrots` page. In order to do that, we can import the saga and modify our 
+route configuration in `configuration/routes.js`:
+
+```
+import fetchUserParrots from 'sagas/parrots/fetchUserParrots';
+
+...
+
+{
+    path: '/parrots',
+    exact: true,
+    name: 'parrots-list',
+    component: ParrotsList,
+    initial: [
+        fetchUserParrots,
+    ],
+},
+```
+
+Now we should see the logged message in the console.
+
+Sagas offer a way of handling side effects in Redux projects (like API requests) 
+which are easy to manage and test. Redux Saga has a nice introduction on their 
+site at https://redux-saga.js.org.
+
+In our project template, the sagas specified in the `initial` array for each 
+route are executed whenever a user visits the route. They're also executed on 
+the server-side so that data can be fetched on the server and returned to the 
+user when they first query the page.
+
+TODO: This is probably a good time to explain SSR? With some nice graphics
+
+Now that we have a function that's triggered when the user queries `/parrots`, 
+we can add API request logic there. But before that, let's create a Redux duck 
+for containing the parrots. Create the `app/src/ducks/parrots.js` file and add 
+the following:
+
+```
+import { combineReducers } from 'redux';
+
+export const RECEIVE_PARROTS = 'parrots/RECEIVE_PARROTS';
+
+const parrotsReducer = (state = [], action) => {
+    switch (action.type) {
+        case RECEIVE_PARROTS:
+            return action.parrots;
+
+        default:
+            return state;
+    }
+};
+
+export default combineReducers({
+    parrots: parrotsReducer,
+});
+
+
+// Action creators
+
+export const receiveParrots = (parrots) => ({
+    type: RECEIVE_PARROTS,
+    parrots,
+});
+```
+
+We also need to configure our application to use the `parrots` duck. We can do 
+that in `configuration/reducers.js`:
+
+```
+import parrots from 'ducks/parrots';
+
+export default (history) => combineReducers({
+    ...
+    parrots,
+});
+```
+
+Finally, we can connect the `ParrotsList` component to the Redux store:
+
+```
+import React from 'react';
+import { connect } from 'react-redux';
+
+import withView from 'decorators/withView';
+
+const ParrotsList = ({ parrots }) => (
+    <div>
+        <h1>Here are your parrots!</h1>
+        <ul>
+            {parrots.map((parrot) => (
+                <li key={parrot.id}>
+                    <a href={parrot.link}>{parrot.name}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+);
+
+const mapStateToProps = (state) => ({
+    parrots: state.parrots.parrots,
+});
+
+const ParrotsListConnector = connect(
+    mapStateToProps,
+)(ParrotsList);
+
+export default withView()(ParrotsListConnector);
+```
+
+It is now possible to dispatch `RECEIVE_PARROTS` actions with some parrots and 
+see them. Let's quickly try this out without any API requests just to make sure 
+everything works alright. Edit the `fetchUserParrots` saga:
+
+```
+import { put } from 'redux-saga/effects';
+
+import { receiveParrots } from 'ducks/parrots';
+
+export default function* fetchUserParrots() {
+    yield put(receiveParrots([
+        { id: 1, name: 'Alex', link: 'https://www.youtube.com/user/doorbell26' },
+        { id: 2, name: 'Benjamin', link: 'https://www.youtube.com/user/parrotpost' },
+    ]));
+}
+```
+
+And we should now be able to see the hard-coded parrots again! We dispatch the 
+`RECEIVE_PARROTS` action using `put`. The next thing to do is to make an API 
+request to retrieve the user's parrots and dispatch the action using those 
+parrots instead.
+
+We could use `fetch` to make this API request, but we have a helper library for 
+making API requests called `tg-resources` (which uses `fetch` or `superagent` 
+under the hood). Using `tg-resources`, we can configure a "resource" that can be 
+used to easily make API calls. Let's configure the `parrotsList` resource in 
+`services/api.js`. In the `createSagaRouter` arguments, add the `parrots` 
+resource like so:
+
+```
+const api = createSagaRouter({
+    ...
+    parrots: {
+        list: 'parrots',
+    },
+}, {
+    ...headers, apiRoot settings, etc.
+});
+```
+
+We can now make use of this resource in the `fetchUserParrots` Saga:
+
+```
+import { put } from 'redux-saga/effects';
+
+import { receiveParrots } from 'ducks/parrots';
+import api from 'services/api';
+
+export default function* fetchUserParrots() {
+    try {
+        const parrots = yield api.parrots.list.fetch();
+        yield put(receiveParrots(parrots));
+    } catch (err) {
+        console.error('Something went wrong!');
+    }
+}
+```
+
+We call the `fetch` method on the `api.parrots.list` resource triggering a GET 
+request to `/api/parrots/`. Similarly, we could use `post` to make a POST 
+request with some data.
+
+A simple way to check if server-side rendering works is to right click on the 
+page and selecting "View Page Source". The saved parrots should show up in the 
+original HTML the server sends to the browser.
+
+**TODO: Explain generators and `yield`?**
+
+**TODO: Replace with API call.**
+
 * Make sure to check the source for SSR
 
 
 
 
-### Creating a parrot
+### Creating parrots
+
+Currently, the only way to add parrots is via the admin page. This is a bit of a 
+problem since then only admin users can add parrots. Also, it's quite 
+inconvenient to navigate to the "add a parrot" admin page. So, let's create a 
+new view with a form for creating parrots.
+
+Let's add a simple non-functional form view to `views/CreateParrot.js`:
+
+```
+import React from 'react';
+import { Form, FormGroup, Label, Input, Button, Container } from 'reactstrap';
+
+const CreateParrot = () => (
+    <Container>
+        <h1>Add a new parrot!</h1>
+        <Form>
+            <FormGroup>
+                <Label for="name">Name</Label>
+                <Input name="name" id="name" />
+            </FormGroup>
+            <FormGroup>
+                <Label for="link">Link</Label>
+                <Input name="link" id="link" type="url" />
+            </FormGroup>
+            <Button>Create</Button>
+        </Form>
+    </Container>
+);
+
+export default CreateParrot;
+```
+
+And add a route for it in `configuration/routes.js`:
+
+```
+const CreateParrot = loadable(() => import('views/CreateParrot'));
+...
+{
+    path: '/parrots/create',
+    exact: true,
+    name: 'create-parrots',
+    component: CreateParrot,
+},
+```
+
+You should see a page like this at `/parrots/create`:
+
+![Create parrot form](img/create-parrot.png)
+
+Unfortunately, we don't currently have access to any field values that the user 
+inputs. One option would be to convert the component to a class component and 
+keep track of the name and the link in state. Another option would be to use 
+refs and manually query the name and link inputs for their values when the user 
+submits the form.
+
+Those solutions require a lot of manual work though (especially for larger 
+forms). So, let's use a package that makes forms in React a breeze: Formik. We 
+can convert our component to use Formik like so:
+
+```
+import React from 'react';
+import { FormGroup, Label, Input, Button, Container } from 'reactstrap';
+import { Formik, Form } from 'formik';
+
+const CreateParrot = () => (
+    <Container>
+        <h1>Add a new parrot!</h1>
+        <Formik
+            initialValues={{ name: '', link: '' }}
+            onSubmit={(values) => {
+                console.log('Submitting!', values);
+            }}
+        >
+            {({
+                values,
+                handleChange,
+            }) => (
+                <Form>
+                    <FormGroup>
+                        <Label for="name">Name</Label>
+                        <Input
+                            name="name"
+                            id="name"
+                            value={values.name}
+                            onChange={handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="link">Link</Label>
+                        <Input
+                            name="link"
+                            id="link"
+                            type="url"
+                            value={values.link}
+                            onChange={handleChange}
+                        />
+                    </FormGroup>
+                    <Button type="submit">Create</Button>
+                </Form>
+            )}
+        </Formik>
+    </Container>
+);
+
+export default CreateParrot;
+```
+
+Formik uses render props and keeps track of form state internally. It is very 
+simple to add validation, showing validation errors, and handling server errors. 
+Even things like disabling the submit button are very simple.
+
+You should now see a message logged to the console with the values you inputted.
+
+Now, we need to send this data to the server so that the server can store the 
+parrot in the database. A very simple way to do it would be to just send a fetch 
+request in the `onSubmit` handler, but let's use a Saga for that.
 
 * Simple Formik view
 * Dispatch action and react to it with Saga, save new parrot to store & 
