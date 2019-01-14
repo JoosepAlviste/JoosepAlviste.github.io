@@ -1,0 +1,993 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-index-js-1e71cbaf6104cc53c059.js" as="script"/><link rel="preload" href="/component---src-templates-project-js-edb437f724a641c54c24.js" as="script"/><link rel="preload" href="/path---blog-thorgate-spa-6419c684c6a0182ce8f5.js" as="script"/><link rel="preload" href="/app-7f5040fa2b97179adfaa.js" as="script"/><link rel="preload" href="/commons-a27d97af4e61333dcc6c.js" as="script"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><script>
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-113623528-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-113623528-1', 'auto');
+      ga('set', 'anonymizeIp', 1);}
+      </script><title data-react-helmet="true">Charon | Joosep Alviste</title><meta data-react-helmet="true" name="description" content="Joosep Alviste, web developer. Experienced in PHP, JavaScript, Laravel, Vue.js and SCSS."/><meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes"/><meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="black"/><meta data-react-helmet="true" name="theme-color" content="#ffffff"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style id="gatsby-inlined-css">.src-components----Icon-module---Icon---2CQ60{display:block;fill:hsla(0,0%,100%,.6);-webkit-transition:all .25s ease-in;transition:all .25s ease-in}.src-components----Icon-module---Icon---2CQ60:hover{fill:#fff}.src-components----Icon-module---Icon---2CQ60.src-components----Icon-module---IsInline---3OG6C{display:inline}.src-components----Icon-module---Icon---2CQ60.src-components----Icon-module---HasHoverScale---lW-w2:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}.src-components----CopyButton-module---CopyButton---bpiFi{padding-left:10px;padding-right:10px;cursor:pointer}.src-components----CopyButton-module---CopyButtonContainer---2gTJ7{position:relative}.src-components----CopyButton-module---CopiedNotification---2mclW{position:absolute;font-size:1rem;top:-1.5rem;left:50%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0);-webkit-animation:src-components----CopyButton-module---fadeUp---O67Vp .75s ease-out;animation:src-components----CopyButton-module---fadeUp---O67Vp .75s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}@-webkit-keyframes src-components----CopyButton-module---fadeUp---O67Vp{0%{-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}50%{opacity:1}to{-webkit-transform:translate3d(-50%,-20px,0);transform:translate3d(-50%,-20px,0);opacity:0}}@keyframes src-components----CopyButton-module---fadeUp---O67Vp{0%{-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}50%{opacity:1}to{-webkit-transform:translate3d(-50%,-20px,0);transform:translate3d(-50%,-20px,0);opacity:0}}.src-components----Footer-module---Footer---EDh5R{padding:10rem 0;text-align:center}.src-components----Footer-module---Text---3zewE{font-size:1.5rem;margin-bottom:1.5rem}@media (max-width:720px){.src-components----Footer-module---Text---3zewE{font-size:1rem}}.src-components----Footer-module---Icons---1Tv4w{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.src-components----Footer-module---Icon---2Sk8_{padding-left:10px;padding-right:10px}html{background:#001b41}body{margin:0;background:-webkit-gradient(linear,left top,left bottom,from(#001b41),to(#000));background:linear-gradient(#001b41,#000);min-height:100vh}h1,h2{margin-top:0;margin-bottom:1.5rem}p,ul{margin-top:0;margin-bottom:1rem}ul{padding-left:0;list-style:none}body{color:#fff;font-family:Roboto Mono,monospace;font-size:16px;line-height:1.5}h1,h2{font-family:Lato,sans-serif;line-height:1.15;font-weight:400}h1{font-size:2rem}h2{font-size:1.75rem}a{color:#fff;text-decoration:none;border-bottom:2px solid #59c1e6;-webkit-transition:color .25s ease-in;transition:color .25s ease-in}a:hover{color:#59c1e6}[data-project=charon] a{border-bottom-color:#59c1e6}[data-project=charon] a:hover{color:#59c1e6}[data-project=virtual-observatory] a{border-bottom-color:#1e5fc9}[data-project=virtual-observatory] a:hover{color:#1e5fc9}[data-project=serieslist] a{border-bottom-color:#7767c4}[data-project=serieslist] a:hover{color:#7767c4}.wider-than-container{margin-left:-40px;margin-right:-40px}@media (max-width:720px){.wider-than-container{margin-left:0;margin-right:0}}.columns{display:-webkit-box;display:-ms-flexbox;display:flex}@media (max-width:720px){.columns{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}.column{-webkit-box-flex:1;-ms-flex:1;flex:1;padding-left:10px;padding-right:10px}.column:first-of-type{padding-left:0}.column:last-of-type{padding-right:0}@media (max-width:720px){.column{padding-left:0;padding-right:0}}.src-components----Container-module---Container---290Il{max-width:720px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto}@media (max-width:720px){.src-components----Container-module---Container---290Il{padding-left:20px;padding-right:20px}}.src-components----FloatingBackButton-module---BackButton---2EPK5{position:fixed;top:40px;left:50px;font-size:1.5rem;border-bottom:none;z-index:2}@media (max-width:720px){.src-components----FloatingBackButton-module---BackButton---2EPK5{position:absolute;top:10px;left:20px}}.src-templates----project-module---Project---29BJe h2{margin:3rem -40px 2rem}@media (max-width:720px){.src-templates----project-module---Project---29BJe h2{margin-left:0;margin-right:0}}.src-templates----project-module---Project---29BJe img{-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:8px solid}.src-templates----project-module---Project---29BJe[data-project=charon] .src-templates----project-module---Title---2ezqx:after,.src-templates----project-module---Project---29BJe[data-project=charon] img{border-bottom-color:#59c1e6}.src-templates----project-module---Project---29BJe[data-project=charon] ::-moz-selection{background:#9bdaf0}.src-templates----project-module---Project---29BJe[data-project=charon] ::selection{background:#9bdaf0}.src-templates----project-module---Project---29BJe[data-project=virtual-observatory] .src-templates----project-module---Title---2ezqx:after,.src-templates----project-module---Project---29BJe[data-project=virtual-observatory] img{border-bottom-color:#1e5fc9}.src-templates----project-module---Project---29BJe[data-project=virtual-observatory] ::-moz-selection{background:#4f88e5}.src-templates----project-module---Project---29BJe[data-project=virtual-observatory] ::selection{background:#4f88e5}.src-templates----project-module---Project---29BJe[data-project=serieslist] .src-templates----project-module---Title---2ezqx:after,.src-templates----project-module---Project---29BJe[data-project=serieslist] img{border-bottom-color:#7767c4}.src-templates----project-module---Project---29BJe[data-project=serieslist] ::-moz-selection{background:#a89ed9}.src-templates----project-module---Project---29BJe[data-project=serieslist] ::selection{background:#a89ed9}.src-templates----project-module---Header---20cBt{padding-top:4rem;padding-bottom:4rem}.src-templates----project-module---Title---2ezqx{font-size:3rem;text-align:center;margin-bottom:0}.src-templates----project-module---Title---2ezqx:after{display:block;content:"";border-bottom:3px solid;width:1em;margin:15px auto}.src-components----ProjectSection-module---ProjectSection---3bdVS{padding-top:120px;padding-bottom:70px}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=charon] ::-moz-selection{background:#9bdaf0}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=charon] ::selection{background:#9bdaf0}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=virtual-observatory] ::-moz-selection{background:#4f88e5}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=virtual-observatory] ::selection{background:#4f88e5}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=serieslist] ::-moz-selection{background:#a89ed9}.src-components----ProjectSection-module---ProjectSection---3bdVS[data-project=serieslist] ::selection{background:#a89ed9}.src-components----ProjectSection-module---Title---3TU3x{margin-bottom:1rem;font-size:4rem;text-align:center}.src-components----ProjectSection-module---Title---3TU3x a{border-bottom:none}@media (max-width:720px){.src-components----ProjectSection-module---Title---3TU3x{font-size:3rem}}.src-components----ProjectSection-module---ContentContainer---Cfc-k{display:-webkit-box;display:-ms-flexbox;display:flex}@media (max-width:720px){.src-components----ProjectSection-module---ContentContainer---Cfc-k{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}.src-components----ProjectSection-module---Tags---E2dQh{-webkit-box-flex:1;-ms-flex:1;flex:1;margin-bottom:0;padding-right:15px;border-right:3px solid;text-align:right}[data-project=charon] .src-components----ProjectSection-module---Tags---E2dQh{border-color:#59c1e6}[data-project=virtual-observatory] .src-components----ProjectSection-module---Tags---E2dQh{border-color:#1e5fc9}[data-project=serieslist] .src-components----ProjectSection-module---Tags---E2dQh{border-color:#7767c4}@media (max-width:720px){.src-components----ProjectSection-module---Tags---E2dQh{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around;border-right:none;border-bottom:3px solid;padding-right:0;padding-bottom:15px}.src-components----ProjectSection-module---Tags---E2dQh li{padding-left:20px;padding-right:20px}}.src-components----ProjectSection-module---DescriptionContainer---JMrF1{-webkit-box-flex:2;-ms-flex:2;flex:2;padding-left:15px}@media (max-width:720px){.src-components----ProjectSection-module---DescriptionContainer---JMrF1{padding-top:15px;padding-left:0}}.src-components----IndexHeader-module---Header---3v34B{-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;min-height:100vh}.src-components----IndexHeader-module---Header---3v34B,.src-components----IndexHeader-module---HeaderContainer---65ZCP{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-pack:center;justify-content:center}.src-components----IndexHeader-module---HeaderContainer---65ZCP{text-align:center;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center}.src-components----IndexHeader-module---Title---2n_Pg{font-size:4rem}.src-components----IndexHeader-module---Subtitle---fqQ-s{font-size:2rem}.src-components----IndexHeader-module---HeaderBottom---1hZfh{justify-self:flex-end;padding-bottom:70px}.src-components----IndexHeader-module---ScrollDownIcon---3kvu6{margin-left:auto;margin-right:auto;padding:20px;cursor:pointer}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="1192035559"><!-- react-empty: 2 --><main aria-label="Content" data-reactid="3"><article class="src-templates----project-module---Project---29BJe" data-project="charon" data-reactid="4"><!-- react-empty: 5 --><a class="src-components----FloatingBackButton-module---BackButton---2EPK5" href="/" data-reactid="6">← Back</a><header class="src-templates----project-module---Header---20cBt" data-reactid="7"><h1 class="src-templates----project-module---Title---2ezqx" data-reactid="8">Charon</h1></header><div class="src-components----Container-module---Container---290Il" data-reactid="9"><div data-reactid="10"><h1>SPA blog post - Getting started with Thorgate's SPA project template (???)</h1>
+<p>(using Django, React, Redux, Redux Saga, Razzle, Docker)</p>
+<p>Intro here - we at Thorgate have recently released a new version of our SPA
+template with Django, React, Redux and Redux Saga.</p>
+<p><strong>TODO: Why SPA &#x26; trends n stuff</strong></p>
+<p>TODO: I assume that you know a little bit about Django and a little bit of
+React. But since we're going through pretty simple examples, you can follow
+along.</p>
+<p>Even if you don't start using our template, it's a good source of inspiration
+for your own project set up.</p>
+<p>Here is the template:
+<a href="https://gitlab.com/thorgate-public/django-project-template/tree/spa">https://gitlab.com/thorgate-public/django-project-template/tree/spa</a>. This also
+includes a more standard Django application template on the <code>master</code> branch.</p>
+<h2>Quick overview (??)</h2>
+<p>The template is a <code>cookiecutter</code> template, meaning that it can easily be used
+to generate your own project. The following technologies are set up by default:
+<a href="https://www.djangoproject.com">Django</a>, React, Redux, Razzle for server-side rendering, Docker,
+<code>docker-compose</code> for super simple container management, <code>fabric</code> for automating
+deploys.</p>
+<ul>
+<li>Django - we are a Python shop/agency</li>
+<li>React</li>
+<li>Redux</li>
+<li>Razzle - server-side rendering by default</li>
+<li>PostgreSQL</li>
+<li>SCSS</li>
+<li>Docker</li>
+<li>Docker-compose</li>
+<li>Fabric - used for deploys</li>
+</ul>
+<p>There is more information in the <a href="https://gitlab.com">readme</a>.</p>
+<h2>Getting up and running</h2>
+<h3>Requirements</h3>
+<p>There are a couple of pre-requisites for generating the project and running it.
+We use Pipenv for managing Python dependencies and generating projects. If you
+haven't used Pipenv before, then it is a really nice package manager for
+Python.</p>
+<p>Firstly, make sure that you have <code>pipenv</code> available, it can easily be installed
+following the <a href="https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv">installation instructions</a> on their website. In
+order to run the project, we also need Docker and <code>docker-compose</code>. Follow
+instructions on how to install those in <a href="https://docs.docker.com/engine/installation/">Docker's
+documentation</a> and <a href="https://docs.docker.com/compose/install/">Docker
+Compose's documentation</a>.</p>
+<p>For reference, here are the versions of the packages I'm using:</p>
+<pre><code>$ pipenv --version
+pipenv, version 2018.11.26
+
+$ docker --version
+Docker version 18.09.0-ce, build 4d60db472b
+
+$ docker-compose --version
+docker-compose version 1.23.2, build unknown
+</code></pre>
+<h3>Generating the project</h3>
+<p>Now that everything is set up, we can generate our project! Clone the project
+template anywhere on your file system and make sure to clone the <code>spa</code> branch:</p>
+<pre><code>git clone https://gitlab.com/thorgate-public/django-project-template.git -b spa
+cd django-project-template
+</code></pre>
+<p>Next, install the dependencies needed to build a new project. This includes
+<code>cookiecutter</code> and a few other packages specified in the template's <code>Pipfile</code>.</p>
+<pre><code>pipenv install
+</code></pre>
+<p>This installs the packages into a <code>django-project-template-XXXXXXXX</code> virtualenv
+that you don't even have to think about -- Pipenv manages all your
+dependencies. Finally, we can generate a new project!</p>
+<p>Let's activate the virtual environment Pipenv has created for us and navigate
+to any folder you want the project to be in:</p>
+<pre><code># Still in the django-project-template directory
+pipenv shell
+cd ~/devel/awesome-projects
+</code></pre>
+<p>Now all that's left is to run <code>cookiecutter</code> to generate the project and answer
+some questions about it:</p>
+<pre><code>cookiecutter path/to/django-project-template
+</code></pre>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/generate-project-138639ea9fac57804ee4d8286e3cadff-66a4d.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 89.04255319148936%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAACk0lEQVQ4y41UZ2/iQBQ0IRwioYTeu8EGgymhE0pILjnpyv//N3NvnmOE7oiUD0+7XnZn583MYkStOaKtCZLdLWLmBrH2GlGpuLnVMdHZIVwfIdjsI1Dvy3yITHeJbG+FdHeBVGeu80T7EUa2CyNUdhAs9PBgzgV0iYy9RrKzRMpaydoCaYvfc0QaI9wUbXB/uDxAqNTHbZHV03mwYMPIdGDc5G18Kzm4FdBYc4LSYIusLbdbCxQ5l9sL/Q1yslZ0tigPn/AgbCLVIe6E+X19jLsaR6+MSNVFtDFBvDVFc/aC7upNgQrOBs3HE2qTI+pS1fEBjekzSgJYlKrJd0paJjgZs0uWoX2nTf0oDp7QElAerI2PMBevCmYuvysAwXNkLJfx0mRnJoAz7Y4YihXIWbiRYv/UgqwI2p6/wj3+Oc+5bi4EeHKQFl3cN8ai8Uxlisr8rGPgA8wzZqYG5EWzymiv7DiSeVXGsrtT9vXpUVsna39vQfRNynmD/ROUN/EAo0DQtCXRsJcaB67xMupMgFxvrWbl+mvVkXPGJyG/qyl0iYYM97+ktWdU3L3eSiOoFcf6hyFkwZbDlYG6Src9DBchiZHBHEXkg5v9IgOKXxrutBXfdZ3LSM3IlpHxRxZxDIrJxbiK6wlMGThnRjWslyVOUiI/Jl7ZWrqfWhGQOpFZ3vE0Yr64zguoI0Mck3msOdV1NZMx+bcYB2f3E53lm+h4EpHn+pzIhoc0Vnn7v/IB/T1+GXSW+fKLevmM6SwZar6usLkGqoD6xPRpnTTE1vpdRxpEF68x+ZQhD9rrH2eHGQv+WTAWfkY/Y3P1EuaLDPXxy8iWmSuCXrr6FTDd1129S6B/qyl8VgSujA6q3VdBLusvHzTxv04PoqIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #000;"
+        alt="generating the project"
+        title=""
+        src="/static/generate-project-138639ea9fac57804ee4d8286e3cadff-03540.png"
+        srcset="/static/generate-project-138639ea9fac57804ee4d8286e3cadff-b012f.png 200w,
+/static/generate-project-138639ea9fac57804ee4d8286e3cadff-375a8.png 400w,
+/static/generate-project-138639ea9fac57804ee4d8286e3cadff-03540.png 800w,
+/static/generate-project-138639ea9fac57804ee4d8286e3cadff-66a4d.png 940w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>I named my project Parrot-mania as it can be used to save notable parrots.</p>
+<p>Now that the project has been generated, we can deactivate the
+<code>django-project-template</code> Pipenv environment since it only contains
+<code>cookiecutter</code> and a few other packages. You can do this by just running
+<code>exit</code>.</p>
+<h3>Running the generated project</h3>
+<p>A <code>Makefile</code> is included in the new project with helpers for running common
+commands. You don't need to know anything about <code>make</code> or <code>c</code>, they're just
+<code>bash</code> commands. The <code>Makefile</code> also includes a set up script that should be
+the first thing to run when setting up a new project:</p>
+<pre><code>make setup
+</code></pre>
+<p>You can find additional useful <code>make</code> scripts in the readme, or by checking out
+the <code>Makefile</code>.</p>
+<p>This will create a new Pipenv environment for you, install packages, build the
+necessary Docker images, and run initial migrations. In addition, it will ask
+you to edit your local Django settings file, just save and close that. If the
+settings file opens in <code>vi</code>, then you can save and exit by typing
+<code>&#x3C;Esc>:wq&#x3C;Enter></code>.</p>
+<p>Now that the project is set up, we can run it through Docker and opening
+<code>127.0.0.1:8000</code> in the browser:</p>
+<pre><code>docker-compose up
+# or
+make docker
+</code></pre>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-86c11.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.89539748953975%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAC4jAAAuIwF4pT92AAABc0lEQVQoz5WSS0sCUQCF5we4zHmgf6FWarko/AWNM+5atJSo/lNqSuYzlTKpSEgoghYtAhHa9S5InRnHcUZPc8cHKmV14ePcxzlnce+l3t4/QGhKMur1xkgbTQlqW7NoK4rFcD0N8RIkWQHF8zwIfr9g4p9QMRBAQBDABzexGtyy5mRPFMUJ+n4/BPOccjqd+AmWZcHZ52Bb24BtfRusOWc5Dg7HwEPU4ZjIUAxNg2EIzAg7bQdjli15vfC4XVhY8WF+2Qfvogcutxscx1oe2szR9DDb76HCkV2EwhHshMKWknVqL4FsLImjdB7FTAHF1AFyyTSS6QxKuUNkowlkovumJ4F4LD7KESj8ZfQGanR/tVJKS8U0stKC3CKoaGsdKI0mpM86FPP1VU0bO+8znqVIYJrhd9ANA3fVGgqlM5yUK8gfn+Lh6cXat77TN9mZhR3dQLV2j3LlCtc3tzi/uMTj8yt0/Z+F48VGtzdxjZ0ZZYQvIUhpuJaKi6IAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #000;"
+        alt="landing page"
+        title=""
+        src="/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-03540.png"
+        srcset="/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-b012f.png 200w,
+/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-375a8.png 400w,
+/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-03540.png 800w,
+/static/landing-page-0c09d4f82a504f4106325d0088f4fefb-86c11.png 956w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Just like that we have set up a new project with a Django API, a React
+front-end app with Redux and Redux Saga, server-side rendering using Razzle,
+and a PostgreSQL database. Since all of these services are running in Docker
+containers, we didn't need to install much locally.</p>
+<h2>Overview of the structure</h2>
+<p>Let's quickly go through the most important files and directories in our new
+project. First, the top level files and directories look like this:</p>
+<pre><code>.
+├── app/  - front-end web app
+├── parrot_mania/  - back-end Django API
+├── docker-compose.production.yml
+├── docker-compose.yml
+├── Dockerfile-django
+├── Dockerfile-django.production
+├── Dockerfile-node
+├── Dockerfile-node.production
+├── Makefile
+└── Pipfile
+</code></pre>
+<p><code>docker-compose</code> and <code>Dockerfile</code> files are used to configure Docker, check
+them out if you'd like to know more. <code>Makefile</code> includes useful utilities like
+<code>make setup</code>, <code>make makemigrations</code>, and <code>make quality</code>. A more in-depth list
+can be found in the <code>README.md</code> and, of course, you can just go through the
+<code>Makefile</code> if you'd like a detailed overview of what's there.</p>
+<p>The <code>app</code> directory includes these important files/directories:</p>
+<pre><code>.
+├── package.json
+├── razzle.config.js  - Razzle's configuration file
+├── SPA.md  - more information about the client app's structure
+├── public/
+└── src
+    ├── components/  - standard React components
+    ├── configuration/ - Redux &#x26; routes config
+    ├── decorators/  - useful higher order components, e.g., loginRequired
+    ├── ducks/  - Redux ducks
+    ├── forms/  - Formik forms
+    ├── sagas/  - Redux Saga sagas
+    ├── settings/
+    ├── styles
+    │   ├── config/  - global variables &#x26; Bootstrap config
+    │   └── main.scss  - all SCSS files are imported here
+    ├── utils/  - useful utilities like translations and PropTypes
+    └── views/  - pages
+</code></pre>
+<p>Since the project is based on <a href="https://github.com/jaredpalmer/razzle">Razzle</a>, we include <code>razzle.config.js</code>
+so that it can easily be configured.</p>
+<p>We generally use <code>ducks</code> as a way to bundle together Redux actions, reducers,
+and action types. You can read more about <code>ducks</code> here: <a href="https://github.com/erikras/ducks-modular-redux">Ducks: Redux Reducer
+Bundles</a>.</p>
+<p><a href="https://github.com/jaredpalmer/formik">Formik</a> is a nice package for building forms in React without the
+tears. These forms are located in <code>src/forms</code>. We'll go through a simple example
+form together as well.</p>
+<p>The backend structure is quite similar to a default Django app.</p>
+<pre><code>.
+├── accounts/
+├── manage.py
+├── parrot_mania/
+└── settings
+    ├── base.py
+    ├── local.py
+    ├── local.py.example
+    ├── local_test.py
+    ├── local_test.py.example
+    ├── production.py
+    ├── staging.py
+    └── test.py
+</code></pre>
+<p>The main difference from a default installation are that JWT authentication is
+already set up, and that Django settings are divided into environment-based
+configuration files. This means that one can easily use different settings for
+production, development, and testing.</p>
+<p>Don't worry if this seems a bit overwhelming right now, we'll go through some
+simple examples together.</p>
+<h2>Our example app</h2>
+<p>Now that you have a general overview of what the project structure is like, we
+can start building our small application!</p>
+<p>I would like to create a simple Parrot reference web app that can be used to
+keep track of interesting parrots. Each user can create parrots and see a list
+of their parrots. We'll make sure that server-side rendering works and make use
+of some of the interesting technologies included in the project template.</p>
+<h3>Showing parrots</h3>
+<p>Let's start with showing the user their saved parrots. Since we already have
+users and authentication set up, then we don't need to spend too much effort on
+getting the current user's personal parrots.</p>
+<p>Firstly, it's a good idea to create a superuser account for development. We
+would normally call <code>python manage.py createsuperuser</code> to create a superuser in
+Django, but since we're running everything inside Docker, then it would be a
+bit trickier. Something like this: <code>docker-compose run --rm django python manage.py createsuperuser</code> would do the trick. But who can remember that? In
+order to make it easier for everyone, the <code>Makefile</code> includes a useful alias for
+running management commands: <code>make docker-manage cmd="createsuperuser"</code>. Now we
+can either click on "Admin panel" in the navbar or go to
+<code>http://127.0.0.1:8000/adminpanel/</code> to see the Django admin page.</p>
+<p>Let's create a new app <code>parrots</code>!</p>
+<pre><code>make docker-manage cmd="startapp parrots"
+</code></pre>
+<p>Since the folder is created inside the Docker container, it is possible that
+its permissions are incorrect. We can easily fix that by running.</p>
+<pre><code>sudo chown -R "$(id -un):$(id -gn)" parrot_mania
+</code></pre>
+<p>We will also need to add our newly generated app to our <code>INSTALLED_APPS</code> in
+<code>settings/base.py</code>:</p>
+<pre><code>INSTALLED_APPS = [
+    # Local apps
+    'accounts',
+    'parrot_mania',
+    'parrots',
+    ...
+]
+</code></pre>
+<p>Now we can add our <code>Parrot</code> model in <code>parrots/models.py</code>:</p>
+<pre><code>from django.db import models
+
+from accounts.models import User
+
+
+class Parrot(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.TextField()
+    user = models.ForeignKey(User)
+</code></pre>
+<p>And let's register the <code>Parrot</code> model to our admin site in <code>parrots/admin.py</code>
+as well:</p>
+<pre><code>from django.contrib import admin
+
+from parrots.models import Parrot
+
+
+admin.site.register(Parrot)
+</code></pre>
+<p>And let's migrate our database using aliases from the <code>Makefile</code>:</p>
+<pre><code>make makemigrations
+make migrate
+</code></pre>
+<p>Now we can add parrots through the Django admin!</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-b25ea.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 64.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAC4jAAAuIwF4pT92AAABnElEQVQ4y52R204CQQyG98XUeIoRnkYRDwgvYDwEXkFBo7caoxHw1sQbiYlERVFIUBJxWfbAzs7u73RgdTlIok2+tNNpO21HmYxuIRTbwLyAdHh9AzMrmxiLbGN8qYuwp1Z2MBdLIpxIIRRPYXYtienVpNApyYywJ6I7UJbSWSSO8kgc5hE/zCF2kMVy5gILu71E9i5AsdFMh0h6kEURo+hthg/NgKpbMB1X4MFkLgzGB9DtXnyfYf/EKPBcWJYJ0iScO8Ls2P8RhXNR2TDgeZ50WKaJlqbBFD6C7gxdBxePuEPw/ZRPKHRgjH2/wGwberMJXVWhi8KyeKsl7/ykftzuRLKgX8jv0Nf9MsofzFWCjmGJ/ffDCvZ0GGydxHEctNtt2GJ0WkVwV5wPg0v8PcodWpb1/aKmNVEqlVAul6GqDREkft37wy9TVerEhzoMQj4udO2zhftaA4/vn3iqq1I/vDWkXazWUXiqyI5lhzTeb9D4rsNQeK3j5OYZZ7cvuLyr4Fzo00IZ2bsqjq+L2M9dgTn855dHyR8mxhd4LsRU2GSPEwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #000;"
+        alt="creating a parrot"
+        title=""
+        src="/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-03540.png"
+        srcset="/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-b012f.png 200w,
+/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-375a8.png 400w,
+/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-03540.png 800w,
+/static/creating-a-parrot-8c654c7a6551e08e9389f7bf8a5f84ba-b25ea.png 980w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>The next step is to create a page on the front-end where we will show the
+parrots. At first, let's use some dummy data so that we can focus on just
+React. Create a file at <code>app/src/views/ParrotsList.js</code>:</p>
+<pre><code>import React from 'react';
+import { Container } from 'reactstrap';
+
+import withView from 'decorators/withView';
+
+const exampleParrots = [
+    { id: 1, name: 'Alex', link: 'https://www.youtube.com/user/doorbell26' },
+    { id: 2, name: 'Benjamin', link: 'https://www.youtube.com/user/parrotpost' },
+];
+
+const ParrotsList = () => (
+    &#x3C;Container>
+        &#x3C;h1>Here are your parrots!&#x3C;/h1>
+        &#x3C;ul>
+            {exampleParrots.map((parrot) => (
+                &#x3C;li key={parrot.id}>
+                    &#x3C;a href={parrot.link}>{parrot.name}&#x3C;/a>
+                &#x3C;/li>
+            ))}
+        &#x3C;/ul>
+    &#x3C;/Container>
+);
+
+export default withView()(ParrotsList);
+</code></pre>
+<p>But how do we say that this is an actual page that React will render on a
+specific URL? Well, we need to specify this in the <code>src/configuration.routes.js</code>
+file.</p>
+<p>Add the following object towards the end of the existing routes, just above the
+last <code>NotFoundRoute</code>:</p>
+<pre><code>...
+{
+    path: '/parrots',
+    exact: true,
+    name: 'parrots-list',
+    component: ParrotsList,
+},
+NotFoundRoute,
+</code></pre>
+<p>We also need to import the component though, so let's add this to the top of
+the file:</p>
+<pre><code>const ParrotsList = loadable(() => import('views/ParrotsList'));
+</code></pre>
+<p>This funny import handles code-splitting and dynamically loading only necessary
+JavaScript for the page that the user is currently on.</p>
+<p>Now we can navigate to <code>http://127.0.0.1:8000/parrots</code> and see our example
+parrots!</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-86c11.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 23.535564853556487%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAp0lEQVQY04WP2Q6CMBRE+///pxYRiEFAlsjeHce2CXEJxIeTmYe5kzukebRgjGOcZnAhMFs/zQxKGyxPeOVCQkjlWb3LtV3n6YYRwziht0oopbhEMcIowfEUIIoTBOfQQ4Mz7mUNqd6ln+pKVxgXHnKISxT2qKobXNOb9RXSLPea5YX9oLeFevPLLUjRG0xigTYG2m7UZvlir8zpFkQpF5C7gd+p/3gBLPOBl7f6xKcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #000;"
+        alt="example parrots list"
+        title=""
+        src="/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-03540.png"
+        srcset="/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-b012f.png 200w,
+/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-375a8.png 400w,
+/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-03540.png 800w,
+/static/example-parrots-list-4492c4a9c5c1f248a100a2f2126b37f3-86c11.png 956w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This is a good time to make sure that our server-side rendering works, we can
+<code>curl</code> the <code>/parrots</code> page:</p>
+<pre><code>curl http://127.0.0.1:8000/parrots
+
+...
+&#x3C;h1>Here are your parrots!&#x3C;/h1>
+...
+</code></pre>
+<p>Even though the HTML is minified, we can see that includes our example parrots
+and their links.</p>
+<p>So far it has been a pretty standard Django and React application, but now that
+we need to show dynamic data to the user, we need communication between the
+server and the client. Let's first do this by just standard HTTP requests and
+then bring in Redux Saga later.</p>
+<p>Firstly, we need an API endpoint to fetch parrots. Using Django Rest Framework,
+it is possible to set up API endpoints very quickly. Let's create our DRF
+serializer in <code>parrot_mania/parrots/serializers.py</code>:</p>
+<pre><code>from rest_framework import serializers
+
+from parrots.models import Parrot
+
+
+class ParrotSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Parrot
+        fields = ('id', 'name', 'link')
+</code></pre>
+<p>And our viewset in <code>parrot_mania/parrots/views.py</code>:</p>
+<pre><code>from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+
+from parrots.models import Parrot
+from parrots.serializers import ParrotSerializer
+
+
+class ParrotViewSet(viewsets.ModelViewSet):
+    queryset = Parrot.objects.all()
+    serializer_class = ParrotSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return super().get_queryset().filter(user=self.request.user)
+</code></pre>
+<p>And register the viewset's URLs using Django Rest Framework's router in
+<code>parrot_mania/parrots/urls.py</code>:</p>
+<pre><code>from rest_framework import routers
+
+from parrots.views import ParrotViewSet
+
+
+router = routers.SimpleRouter()
+router.register(r'parrots', ParrotViewSet, base_name='parrots')
+urlpatterns = router.urls
+</code></pre>
+<p>And finally include these URLs in <code>parrot_mania/parrot_mania/rest/urls.py</code></p>
+<pre><code>urlpatterns = [
+    ...
+    url(r'^', include('parrots.urls')),
+]
+</code></pre>
+<p>We can test it out with <code>curl</code> if we remove the authentication check and
+current user filtering:</p>
+<pre><code>class ParrotViewSet(viewsets.ModelViewSet):
+    queryset = Parrot.objects.all()
+    serializer_class = ParrotSerializer
+    # permission_classes = [IsAuthenticated]
+
+    # def get_queryset(self):
+    #     return super().get_queryset().filter(user=self.request.user)
+</code></pre>
+<pre><code>http://127.0.0.1:8000/api/parrots/
+
+[
+    {"id":1,"name":"Alex","link":"https://www.youtube.com/user/doorbell26"},
+    {"id":2,"name":"Benjamin","link":"https://www.youtube.com/user/parrotpost"}
+]
+</code></pre>
+<p>We need to get this data to our front-end though. At first, let's try to do
+this with a simple <code>fetch</code> request:</p>
+<pre><code>import React, { Component } from 'react';
+import { Container } from 'reactstrap';
+
+import withView from 'decorators/withView';
+
+class ParrotsList extends Component {
+    state = {
+        parrots: [],
+    };
+
+    componentDidMount() {
+        fetch('/api/parrots')
+            .then((res) => res.json())
+            .then((parrots) => {
+                this.setState({ parrots });
+            });
+    }
+
+    render() {
+        return (
+            &#x3C;Container>
+                &#x3C;h1>Here are your parrots!&#x3C;/h1>
+                &#x3C;ul>
+                    {this.state.parrots.map((parrot) => (
+                        &#x3C;li key={parrot.id}>
+                            &#x3C;a href={parrot.link}>{parrot.name}&#x3C;/a>
+                        &#x3C;/li>
+                    ))}
+                &#x3C;/ul>
+            &#x3C;/div>
+        );
+    }
+}
+
+export default withView()(ParrotsList);
+</code></pre>
+<p>The problem here though, is that the parrots do not get server-rendered anymore
+since they are fetched in <code>componentDidMount</code> -- when the component has been
+rendered on the client side. In order to fix this, you can write your first
+Saga. A saga listens to any dispatched Redux actions and can react to them --
+for example, dispatching more actions or making API requests. In our SPA
+projects, all communication with the API goes through Sagas.</p>
+<p>The saga we will write will be very simple. It's going to be called whenever
+anyone navigates to the <code>/parrots</code> route. In addition, it will be called on the
+server whenever the user <em>initially</em> navigates to the <code>/parrots</code> route.</p>
+<p>At first, let's just log something to the console so that we see that it's
+working. Create a <code>app/src/sagas/parrots</code> directory and a <code>fetchUserParrots.js</code>
+file inside it with the following contents (make sure not to miss the <code>*</code> next
+to <code>function</code>).</p>
+<pre><code>export default function* fetchUserParrots() {
+    console.log('Fetching some parrots!');
+}
+</code></pre>
+<p>We also need to configure this saga to be triggered whenever users visit the
+<code>/parrots</code> page. In order to do that, we can import the saga and modify our
+route configuration in <code>configuration/routes.js</code>:</p>
+<pre><code>import fetchUserParrots from 'sagas/parrots/fetchUserParrots';
+
+...
+
+{
+    path: '/parrots',
+    exact: true,
+    name: 'parrots-list',
+    component: ParrotsList,
+    initial: [
+        fetchUserParrots,
+    ],
+},
+</code></pre>
+<p>Now we should see the logged message in the console.</p>
+<p>Sagas offer a way of handling side effects in Redux projects (like API requests)
+which are easy to manage and test. Redux Saga has a nice introduction on their
+site at <a href="https://redux-saga.js.org">https://redux-saga.js.org</a>.</p>
+<p>In our project template, the sagas specified in the <code>initial</code> array for each
+route are executed whenever a user visits the route. They're also executed on
+the server-side so that data can be fetched on the server and returned to the
+user when they first query the page.</p>
+<p><strong>TODO</strong>: This is probably a good time to explain SSR? With some nice graphics</p>
+<p>Now that we have a function that's triggered when the user queries <code>/parrots</code>,
+we can add API request logic there. But before that, let's create a Redux duck
+for containing the parrots. Create the <code>app/src/ducks/parrots.js</code> file and add
+the following:</p>
+<pre><code>import { combineReducers } from 'redux';
+
+export const RECEIVE_PARROTS = 'parrots/RECEIVE_PARROTS';
+
+const parrotsReducer = (state = [], action) => {
+    switch (action.type) {
+        case RECEIVE_PARROTS:
+            return action.parrots;
+
+        default:
+            return state;
+    }
+};
+
+export default combineReducers({
+    parrots: parrotsReducer,
+});
+
+
+// Action creators
+
+export const receiveParrots = (parrots) => ({
+    type: RECEIVE_PARROTS,
+    parrots,
+});
+</code></pre>
+<p>We also need to configure our application to use the <code>parrots</code> duck. We can do
+that in <code>configuration/reducers.js</code>:</p>
+<pre><code>import parrots from 'ducks/parrots';
+
+export default (history) => combineReducers({
+    ...
+    parrots,
+});
+</code></pre>
+<p>Finally, we can connect the <code>ParrotsList</code> component to the Redux store:</p>
+<pre><code>import React from 'react';
+import { Container } from 'reactstrap';
+import { connect } from 'react-redux';
+
+import withView from 'decorators/withView';
+
+const ParrotsList = ({ parrots }) => (
+    &#x3C;Container>
+        &#x3C;h1>Here are your parrots!&#x3C;/h1>
+        &#x3C;ul>
+            {parrots.map((parrot) => (
+                &#x3C;li key={parrot.id}>
+                    &#x3C;a href={parrot.link}>{parrot.name}&#x3C;/a>
+                &#x3C;/li>
+            ))}
+        &#x3C;/ul>
+    &#x3C;/Container>
+);
+
+const mapStateToProps = (state) => ({
+    parrots: state.parrots.parrots,
+});
+
+const ParrotsListConnector = connect(
+    mapStateToProps,
+)(ParrotsList);
+
+export default withView()(ParrotsListConnector);
+</code></pre>
+<p>It is now possible to dispatch <code>RECEIVE_PARROTS</code> actions with some parrots and
+see them. Let's quickly try this out without any API requests just to make sure
+everything works alright. Edit the <code>fetchUserParrots</code> saga:</p>
+<pre><code>import { put } from 'redux-saga/effects';
+
+import { receiveParrots } from 'ducks/parrots';
+
+export default function* fetchUserParrots() {
+    yield put(receiveParrots([
+        { id: 1, name: 'Alex', link: 'https://www.youtube.com/user/doorbell26' },
+        { id: 2, name: 'Benjamin', link: 'https://www.youtube.com/user/parrotpost' },
+    ]));
+}
+</code></pre>
+<p>And we should now be able to see the hard-coded parrots again! We dispatch the
+<code>RECEIVE_PARROTS</code> action using <code>put</code>. The next thing to do is to make an API
+request to retrieve the user's parrots and dispatch the action using those
+parrots instead.</p>
+<p>We could use <code>fetch</code> to make this API request, but we have a helper library for
+making API requests called <code>tg-resources</code> (which uses <code>fetch</code> or <code>superagent</code>
+under the hood). Using <code>tg-resources</code>, we can configure a "resource" that can be
+used to easily make API calls. Let's configure the <code>parrotsList</code> resource in
+<code>services/api.js</code>. In the <code>createSagaRouter</code> arguments, add the <code>parrots</code>
+resource like so:</p>
+<pre><code>const api = createSagaRouter({
+    ...
+    parrots: {
+        list: 'parrots/',
+    },
+}, {
+    ...headers, apiRoot settings, etc.
+});
+</code></pre>
+<p>We can now make use of this resource in the <code>fetchUserParrots</code> Saga:</p>
+<pre><code>import { put } from 'redux-saga/effects';
+
+import { receiveParrots } from 'ducks/parrots';
+import api from 'services/api';
+
+export default function* fetchUserParrots() {
+    try {
+        const parrots = yield api.parrots.list.fetch();
+        yield put(receiveParrots(parrots));
+    } catch (err) {
+        console.error('Something went wrong!');
+    }
+}
+</code></pre>
+<p>We call the <code>fetch</code> method on the <code>api.parrots.list</code> resource triggering a GET
+request to <code>/api/parrots/</code>. Similarly, we could use <code>post</code> to make a POST
+request with some data.</p>
+<p>A simple way to check if server-side rendering works is to right click on the
+page and selecting "View Page Source". The saved parrots should show up in the
+original HTML the server sends to the browser.</p>
+<p><strong>TODO: Explain generators and <code>yield</code>?</strong></p>
+<h3>Creating parrots</h3>
+<p>Currently, the only way to add parrots is via the admin page. This is a bit of a
+problem since then only admin users can add parrots. Also, it's quite
+inconvenient to navigate to the "add a parrot" admin page. So, let's create a
+new view with a form for creating parrots.</p>
+<p>Let's add a simple non-functional form view to <code>views/CreateParrot.js</code>:</p>
+<pre><code>import React from 'react';
+import { Form, FormGroup, Label, Input, Button, Container } from 'reactstrap';
+
+const CreateParrot = () => (
+    &#x3C;Container>
+        &#x3C;h1>Add a new parrot!&#x3C;/h1>
+        &#x3C;Form>
+            &#x3C;FormGroup>
+                &#x3C;Label for="name">Name&#x3C;/Label>
+                &#x3C;Input name="name" id="name" />
+            &#x3C;/FormGroup>
+            &#x3C;FormGroup>
+                &#x3C;Label for="link">Link&#x3C;/Label>
+                &#x3C;Input name="link" id="link" type="url" />
+            &#x3C;/FormGroup>
+            &#x3C;Button>Create&#x3C;/Button>
+        &#x3C;/Form>
+    &#x3C;/Container>
+);
+
+export default CreateParrot;
+</code></pre>
+<p>And add a route for it in <code>configuration/routes.js</code>:</p>
+<pre><code>const CreateParrot = loadable(() => import('views/CreateParrot'));
+...
+{
+    path: '/parrots/create',
+    exact: true,
+    name: 'create-parrots',
+    component: CreateParrot,
+},
+</code></pre>
+<p>You should see a page like this at <code>/parrots/create</code>:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-142b0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.84709480122324%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAA/0lEQVQoz52S207DMBBE/f+fwhMP/AOiQqhtGpAQ4gVR9QbN1UnsOFPP0hCXlnJ5ONo4ys7MeqMWyxVW6w2yvEBRauiqRqkrNMaiA9C6DnVjUNWN1PA5zXK8bxMkaSb9eVFCsZkiPFzfjDCNYkxnMWbxA0a3dxhPImmgAYUGDMq9ea9BFJ34MQ8vr3NpJtskxXrzJpUCzT5dCPtI+E718bWv2ju1zsmYjviZWY1tPfY0Ijgk/xSUFMaIwId7iD3D4b0OCf3Ij0/PWPoFMSWdv011lPCLIJ24lIvLK4yjexmZBodLOE8vqkJ113Ww/r7CX+S3HI18yu1fCX8S/GvSHeDlCJBahagrAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #000;"
+        alt="Create parrot form"
+        title=""
+        src="/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-03540.png"
+        srcset="/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-b012f.png 200w,
+/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-375a8.png 400w,
+/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-03540.png 800w,
+/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-09d7b.png 1200w,
+/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-f2045.png 1600w,
+/static/create-parrot-250a5db9a8c8c98e2d6f12e03befb297-142b0.png 1962w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Unfortunately, we don't currently have access to any field values that the user
+inputs. One option would be to convert the component to a class component and
+keep track of the name and the link in the component's state. Another option
+would be to use refs and manually query the name and link inputs for their
+values when the user submits the form.</p>
+<p>Those solutions require a lot of manual work though (especially for larger
+forms). So, let's use a package that makes forms in React a breeze: Formik. We
+can convert our component to use Formik like so:</p>
+<pre><code>import React from 'react';
+import { FormGroup, Label, Input, Button, Container } from 'reactstrap';
+import { Formik, Form } from 'formik';
+
+const CreateParrot = () => (
+    &#x3C;Container>
+        &#x3C;h1>Add a new parrot!&#x3C;/h1>
+        &#x3C;Formik
+            initialValues={{ name: '', link: '' }}
+            onSubmit={(values) => {
+                console.log('Submitting!', values);
+            }}
+        >
+            {({ values, handleChange }) => (
+                &#x3C;Form>
+                    &#x3C;FormGroup>
+                        &#x3C;Label for="name">Name&#x3C;/Label>
+                        &#x3C;Input
+                            name="name"
+                            id="name"
+                            value={values.name}
+                            onChange={handleChange}
+                        />
+                    &#x3C;/FormGroup>
+                    &#x3C;FormGroup>
+                        &#x3C;Label for="link">Link&#x3C;/Label>
+                        &#x3C;Input
+                            name="link"
+                            id="link"
+                            type="url"
+                            value={values.link}
+                            onChange={handleChange}
+                        />
+                    &#x3C;/FormGroup>
+                    &#x3C;Button type="submit">Create&#x3C;/Button>
+                &#x3C;/Form>
+            )}
+        &#x3C;/Formik>
+    &#x3C;/Container>
+);
+
+export default CreateParrot;
+</code></pre>
+<p>Formik keeps track of the form's state internally and uses a render props based
+API to allow us to access the state and modify it. It is very simple to add
+validation, showing validation errors, and handling server errors. Even things
+like disabling the submit button when the user has clicked it is very simple.</p>
+<p>You should now see a message logged to the console with the values you inputted.</p>
+<p>Now, we need to send this data to the server so that the server can store the
+parrot in the database. A very simple way to do it would be to just send a fetch
+request in the <code>onSubmit</code> handler, but let's use a Saga for that.</p>
+<p>Let's add a <code>createParrot.js</code> file to <code>sagas/parrots/</code> with the following
+contents:</p>
+<pre><code>import { takeEvery } from 'redux-saga/effects';
+
+
+const CREATE_PARROT = 'CREATE_PARROT';
+
+export const createParrot = (name, link) => ({
+    type: CREATE_PARROT,
+    name,
+    link,
+});
+
+function* createParrotSaga(createParrotAction) {
+    console.log('create parrot:', createParrotAction);
+}
+
+export default function* createParrotWatcher() {
+    yield takeEvery(CREATE_PARROT, createParrotSaga);
+}
+</code></pre>
+<p>This saga specifies its own action that it can react to -- <code>CREATE_PARROT</code>. The
+<code>createParrotWatcher</code> will be watching for any dispatched <code>CREATE_PARROT</code>
+actions and run <code>createParrotSaga</code> passing it the action as the argument.
+Currently we're just logging the <code>createParrotAction</code> in order to make sure that
+we get passed the correct data. Let's configure this Saga to "watch" for any
+actions dispatched in the <code>/parrots/create</code> route by adding it as the <code>watcher</code>
+for that route in <code>routes.js</code>:</p>
+<pre><code>{
+    path: '/parrots/create',
+    exact: true,
+    name: 'create-parrots',
+    component: CreateParrot,
+    watcher: createParrotWatcher,
+},
+</code></pre>
+<p>And finally, let's connect our <code>CreateParrot</code> component to Redux:</p>
+<pre><code>...
+import { connect } from 'react-redux';
+
+import { createParrot } from 'sagas/parrots/createParrot';
+
+const CreateParrot = ({ createParrot }) => (
+    &#x3C;Container>
+        &#x3C;h1>Add a new parrot!&#x3C;/h1>
+        &#x3C;Formik
+            initialValues={{ name: '', link: '' }}
+            onSubmit={(values) => {
+                createParrot(values.name, values.link);
+            }}
+        >
+            ...
+        &#x3C;/Formik>
+    &#x3C;/Container>
+);
+
+const mapDispatchToProps = (dispatch) => ({
+    createParrot: (name, link) => dispatch(createParrot(name, link)),
+});
+
+const CreateParrotConnector = connect(
+    null,
+    mapDispatchToProps,
+)(CreateParrot);
+
+export default CreateParrotConnector;
+</code></pre>
+<p>Now, whenever the form is submitted, we dispatch the <code>CREATE_PARROT</code> action
+passing it the name and the link.</p>
+<p>We should now see the logged message in the console with the
+<code>createParrotAction</code> including the specified <code>name</code> and <code>link</code>.</p>
+<p>We can now send a POST request to the server using our <code>parrots.list</code> resource:</p>
+<pre><code>...
+import api from 'services/api';
+
+...
+
+function* createParrotSaga(createParrotAction) {
+    try {
+        const { name, link } = createParrotAction;
+        yield api.parrots.list.post(null, { name, link });
+    } catch (e) {
+        console.log('Something went wrong!');
+    }
+}
+
+...
+</code></pre>
+<p>This <em>almost</em> works. We aren't currently sending the <code>user_id</code> field to the
+server, but since it's required, we get a <code>500</code> error saying that the <code>user_id</code>
+field cannot be <code>null</code>. It would be great if we didn't need to send this
+<code>user_id</code> manually, but instead, Django would take the authenticated user and
+save the parrot to the database with that user's ID.</p>
+<p>We can accomplish this very easily by overriding the <code>perform_create</code> method on
+the <code>ParrotViewSet</code> and passing the currently authenticated user to the
+serializer:</p>
+<pre><code>class ParrotViewSet(viewsets.ModelViewSet):
+    ...
+
+    def perform_create(self, serializer):
+        return serializer.save(user=self.request.user)
+</code></pre>
+<p>Creating parrots should now work! However, we don't actually see anything
+happening. Let's redirect the user to <code>/parrots</code> once the request has finished.
+In the <code>createParrot</code> Saga, modify the <code>createParrotSaga</code> function like so:</p>
+<pre><code>import { push } from 'connected-react-router';
+import { takeEvery, put } from 'redux-saga/effects';
+...
+
+function* createParrotSaga(createParrotAction) {
+    try {
+        const { name, link } = createParrotAction;
+        yield api.parrots.list.post(null, { name, link });
+
+        yield put(push('/parrots'));
+    } catch (e) {
+        console.log('Something went wrong!');
+    }
+}
+
+...
+</code></pre>
+<p>Let's also add a link to <code>/parrots/create</code> to our <code>ParrotsList</code> component:</p>
+<pre><code>...
+import { Link } from 'react-router-dom';
+...
+const ParrotsList = ({ parrots }) => (
+    &#x3C;Container>
+        &#x3C;h1>Here are your parrots!&#x3C;/h1>
+        &#x3C;Link to="/parrots/create">
+            Add a new parrot!
+        &#x3C;/Link>
+        ...
+    &#x3C;/Container>
+);
+</code></pre>
+<h3>Full source of Parrot-mania</h3>
+<p>You can check out the full source of Parrot-mania here:
+<a href="https://github.com/JoosepAlviste/parrot-mania">https://github.com/JoosepAlviste/parrot-mania</a></p>
+<h2>Future improvements to the template</h2>
+<ul>
+<li>Kubernetes</li>
+<li>Out-of-the-box testing set up with <code>react-testing-library</code></li>
+<li>GraphQL (???)</li>
+</ul></div></div></article></main><div class="src-components----Footer-module---Footer---EDh5R" data-reactid="11"><div class="src-components----Footer-module---Text---3zewE" data-reactid="12"><span data-reactid="13">joosep.alviste@gmail.com</span><span class="src-components----CopyButton-module---CopyButtonContainer---2gTJ7" data-reactid="14"><svg class="src-components----Icon-module---Icon---2CQ60 src-components----Icon-module---IsInline---3OG6C false src-components----CopyButton-module---CopyButton---bpiFi" viewBox="0 0 24 24" width="24px" height="24px" data-reactid="15"><title data-reactid="16">Copy button</title><path d="M0 0h24v24H0z" fill="none" data-reactid="17"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" data-reactid="18"></path></svg></span></div><div class="src-components----Footer-module---Icons---1Tv4w" data-reactid="19"><div class="src-components----Footer-module---Icon---2Sk8_" data-reactid="20"><a href="/files/CV Joosep Alviste.pdf" target="_blank" rel="noopener noreferrer" data-reactid="21"><svg class="src-components----Icon-module---Icon---2CQ60 false src-components----Icon-module---HasHoverScale---lW-w2 " viewBox="0 0 24 13" width="50px" height="25px" data-reactid="22"><title data-reactid="23">CV icon</title><g transform="translate(-17.000000, -12.000000)" data-reactid="24"><path d="M26.6035635,21.8599459 C26.7342249,21.8599459 26.8470671,21.9097875 26.9420935,22.0094723 L27.8864143,23.0209743 C27.3637687,23.6601295 26.720865,24.1497502 25.9576837,24.4898512 C25.1945025,24.8299521 24.2784018,25 23.2093541,25 C22.2531504,25 21.3934708,24.8387477 20.6302895,24.5162382 C19.8671083,24.1937287 19.2152959,23.745154 18.674833,23.1705007 C18.13437,22.5958474 17.7201202,21.909792 17.4320713,21.1123139 C17.1440223,20.3148359 17,19.4440733 17,18.5 C17,17.5441991 17.1603547,16.6690387 17.481069,15.8744926 C17.8017833,15.0799464 18.2531522,14.395357 18.8351893,13.8207037 C19.4172264,13.2460504 20.1135817,12.7989416 20.9242762,12.479364 C21.7349706,12.1597864 22.6302846,12 23.610245,12 C24.5664487,12 25.4023721,12.1509908 26.1180401,12.452977 C26.8337081,12.7549632 27.4469165,13.1551621 27.9576837,13.6535859 L27.155902,14.7530447 C27.1083888,14.8234104 27.0475134,14.8849794 26.9732739,14.9377537 C26.8990345,14.990528 26.7965857,15.0169147 26.6659243,15.0169147 C26.5293237,15.0169147 26.3897557,14.9641413 26.247216,14.8585927 C26.1046763,14.7530441 25.9235349,14.6387016 25.7037862,14.5155616 C25.4840375,14.3924216 25.2063862,14.278079 24.8708241,14.1725304 C24.5352619,14.0669819 24.109134,14.0142084 23.5924276,14.0142084 C22.9866339,14.0142084 22.4298466,14.1182894 21.922049,14.3264547 C21.4142514,14.5346199 20.9777301,14.8322037 20.6124722,15.2192152 C20.2472142,15.6062266 19.9621391,16.0767902 19.7572383,16.6309202 C19.5523375,17.1850501 19.4498886,17.8080705 19.4498886,18.5 C19.4498886,19.2153847 19.5523375,19.8515985 19.7572383,20.4086604 C19.9621391,20.9657222 20.2397904,21.4348199 20.5902004,21.8159675 C20.9406105,22.1971151 21.3533755,22.4888353 21.8285078,22.6911367 C22.3036401,22.8934381 22.8143996,22.9945873 23.3608018,22.9945873 C23.6874552,22.9945873 23.9829237,22.9769961 24.247216,22.9418133 C24.5115084,22.9066304 24.75501,22.8509251 24.9777283,22.7746955 C25.2004465,22.698466 25.4112833,22.6002487 25.610245,22.4800406 C25.8092066,22.3598325 26.0066805,22.2117735 26.2026726,22.0358593 C26.2620641,21.983085 26.3244243,21.940573 26.389755,21.9083221 C26.4550857,21.8760711 26.5263545,21.8599459 26.6035635,21.8599459 Z M28.4298441,12.1407307 L30.363029,12.1407307 C30.5708993,12.1407307 30.7401627,12.1905723 30.8708241,12.2902571 C31.0014854,12.3899419 31.09948,12.5189437 31.1648107,12.6772666 L34.1937639,20.4350474 C34.2947295,20.6871912 34.3912393,20.964252 34.4832962,21.2662382 C34.5753531,21.5682243 34.6629543,21.8863312 34.7461024,22.2205683 C34.882703,21.5462303 35.0519663,20.9510626 35.2538976,20.4350474 L38.2739421,12.6772666 C38.3273945,12.542399 38.4224195,12.4192608 38.55902,12.3078484 C38.6956206,12.1964361 38.8648839,12.1407307 39.0668151,12.1407307 L41,12.1407307 L35.7973274,24.8592693 L33.6325167,24.8592693 L28.4298441,12.1407307 Z" data-reactid="25"></path></g></svg></a></div><div class="src-components----Footer-module---Icon---2Sk8_" data-reactid="26"><a href="https://github.com/JoosepAlviste" target="_blank" rel="noopener noreferrer" data-reactid="27"><svg class="src-components----Icon-module---Icon---2CQ60 false src-components----Icon-module---HasHoverScale---lW-w2 " viewBox="0 0 33 33" width="33px" height="33px" data-reactid="28"><title data-reactid="29">GitHub logo</title><g transform="translate(-136.000000, -331.000000)" data-reactid="30"><path d="M152.608,331.455 C143.614,331.455 136.32,338.748 136.32,347.745 C136.32,354.942 140.987,361.047 147.46,363.201 C148.275,363.351 148.572,362.848 148.572,362.416 C148.572,362.029 148.558,361.005 148.55,359.646 C144.019,360.63 143.063,357.462 143.063,357.462 C142.322,355.58 141.254,355.079 141.254,355.079 C139.775,354.069 141.366,354.089 141.366,354.089 C143.001,354.204 143.861,355.768 143.861,355.768 C145.314,358.257 147.674,357.538 148.602,357.121 C148.75,356.069 149.171,355.351 149.636,354.944 C146.019,354.533 142.216,353.135 142.216,346.893 C142.216,345.115 142.851,343.66 143.893,342.522 C143.725,342.11 143.166,340.453 144.053,338.211 C144.053,338.211 145.42,337.773 148.532,339.881 C149.831,339.519 151.225,339.339 152.61,339.332 C153.994,339.339 155.387,339.519 156.688,339.881 C159.798,337.773 161.163,338.211 161.163,338.211 C162.052,340.453 161.493,342.11 161.326,342.522 C162.37,343.66 163,345.115 163,346.893 C163,353.151 159.191,354.528 155.563,354.931 C156.147,355.434 156.668,356.428 156.668,357.947 C156.668,360.125 156.648,361.882 156.648,362.416 C156.648,362.852 156.942,363.359 157.768,363.2 C164.236,361.041 168.899,354.94 168.899,347.745 C168.899,338.748 161.605,331.455 152.608,331.455" data-reactid="31"></path></g></svg></a></div><div class="src-components----Footer-module---Icon---2Sk8_" data-reactid="32"><a href="https://www.linkedin.com/in/joosep-alviste/" target="_blank" rel="noopener noreferrer" data-reactid="33"><svg class="src-components----Icon-module---Icon---2CQ60 false src-components----Icon-module---HasHoverScale---lW-w2 " viewBox="0 0 430.117 430.117" width="33px" height="33px" data-reactid="34"><title data-reactid="35">LinkedIn logo</title><g data-reactid="36"><path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707 c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21 v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824 C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463 c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z M5.477,420.56h92.184v-277.32H5.477V420.56z" data-reactid="37"></path></g></svg></a></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-7f5040fa2b97179adfaa.js","110308036455227":"component---src-templates-project-js-edb437f724a641c54c24.js","162898551421021":"component---src-pages-404-js-56780c860000a1a1b6d4.js","35783957827783":"component---src-pages-index-js-60c8f803d95b5e75efe0.js","60335399758886":"path----7432404475fae5deb772.js","53962015394184":"path---charon-b1daa35cbf26d8552007.js","19489407155680":"path---serieslist-0b81a302a2d908ed2f47.js","251348159766897":"path---virtual-observatory-2891ad15afd8abe3aaef.js","212854761677524":"path---blog-thorgate-spa-6419c684c6a0182ce8f5.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-7f0e5414d3c89bbc9b11.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-1e71cbaf6104cc53c059.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/commons-a27d97af4e61333dcc6c.js","/app-7f5040fa2b97179adfaa.js","/path---blog-thorgate-spa-6419c684c6a0182ce8f5.js","/component---src-templates-project-js-edb437f724a641c54c24.js","/component---src-layouts-index-js-1e71cbaf6104cc53c059.js"])/*]]>*/</script></body></html>

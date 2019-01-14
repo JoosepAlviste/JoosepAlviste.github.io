@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{139:function(e,t){e.exports={data:{site:{siteMetadata:{email:"joosep.alviste@gmail.com",gitHubLink:"https://github.com/JoosepAlviste",linkedInLink:"https://www.linkedin.com/in/joosep-alviste/",description:"Joosep Alviste, web developer. Experienced in PHP, JavaScript, Laravel, Vue.js and SCSS.",title:"Joosep Alviste"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----7432404475fae5deb772.js.map

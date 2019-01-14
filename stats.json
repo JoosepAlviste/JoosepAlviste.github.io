@@ -1,0 +1,64 @@
+{
+  "assetsByChunkName": {
+    "path---serieslist": [
+      "path---serieslist-0b81a302a2d908ed2f47.js",
+      "path---serieslist-0b81a302a2d908ed2f47.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-60c8f803d95b5e75efe0.js",
+      "component---src-pages-index-js-60c8f803d95b5e75efe0.js.map"
+    ],
+    "path---charon": [
+      "path---charon-b1daa35cbf26d8552007.js",
+      "path---charon-b1daa35cbf26d8552007.js.map"
+    ],
+    "path---": [
+      "path----7432404475fae5deb772.js",
+      "path----7432404475fae5deb772.js.map"
+    ],
+    "component---src-templates-project-js": [
+      "component---src-templates-project-js-edb437f724a641c54c24.js",
+      "component---src-templates-project-js-edb437f724a641c54c24.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-1e71cbaf6104cc53c059.js",
+      "component---src-layouts-index-js-1e71cbaf6104cc53c059.js.map"
+    ],
+    "path---index": [
+      "path---index-7f0e5414d3c89bbc9b11.js",
+      "path---index-7f0e5414d3c89bbc9b11.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-56780c860000a1a1b6d4.js",
+      "component---src-pages-404-js-56780c860000a1a1b6d4.js.map"
+    ],
+    "commons": [
+      "commons-a27d97af4e61333dcc6c.js",
+      "build-js-styles.css",
+      "commons-a27d97af4e61333dcc6c.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---blog-thorgate-spa": [
+      "path---blog-thorgate-spa-6419c684c6a0182ce8f5.js",
+      "path---blog-thorgate-spa-6419c684c6a0182ce8f5.js.map"
+    ],
+    "app": [
+      "app-7f5040fa2b97179adfaa.js",
+      "build-js-styles.css",
+      "app-7f5040fa2b97179adfaa.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---virtual-observatory": [
+      "path---virtual-observatory-2891ad15afd8abe3aaef.js",
+      "path---virtual-observatory-2891ad15afd8abe3aaef.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
