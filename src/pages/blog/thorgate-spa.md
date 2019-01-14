@@ -1,15 +1,20 @@
 ---
-title: Charon
+title: Getting started with Thorgate's SPA project template (???)
 ---
 
-# SPA blog post - Getting started with Thorgate's SPA project template (???)
+# Getting started with Thorgate's SPA project template (???)
 
 (using Django, React, Redux, Redux Saga, Razzle, Docker)
 
 Intro here - we at Thorgate have recently released a new version of our SPA
-template with Django, React, Redux and Redux Saga.
+template with Django, React, Redux and Redux Saga. In this post, we're going to
+be building a simple application that can be used to keep track of notable
+parrots.
 
 **TODO: Why SPA & trends n stuff**
+
+* More and more complexity is taken to the client side
+* Total separation of client and server apps
 
 TODO: I assume that you know a little bit about Django and a little bit of
 React. But since we're going through pretty simple examples, you can follow
@@ -18,32 +23,40 @@ along.
 Even if you don't start using our template, it's a good source of inspiration
 for your own project set up.
 
-Here is the template:
-https://gitlab.com/thorgate-public/django-project-template/tree/spa. This also
-includes a more standard Django application template on the `master` branch.
+The template is available on [GitLab][template-repo] on the `spa` branch. The
+repository also includes a more standard Django application template on the
+`master` branch.
 
 ## Quick overview (??)
 
-The template is a `cookiecutter` template, meaning that it can easily be used
-to generate your own project. The following technologies are set up by default:
-[Django][django], React, Redux, Razzle for server-side rendering, Docker,
-`docker-compose` for super simple container management, `fabric` for automating
-deploys.
+The template is a [`cookiecutter`][cookiecutter] template, meaning that it can
+easily be used to generate your own project. Here are some of the main
+technologies included and set up in the template:
 
-* Django - we are a Python shop/agency
-* React
-* Redux
-* Razzle - server-side rendering by default
-* PostgreSQL
-* SCSS
-* Docker
-* Docker-compose
-* Fabric - used for deploys
+* [Django][django] - we are an agency focusing on Python and Django
+* [React][react] - our front-end library of choice
+* [Redux][redux] - state management for intricate React applications
+* [Razzle][razzle] - enabling server-side rendering
+* [PostgreSQL][postgres] - our database management system of choice
+* [SCSS][scss] - a nicer way to write CSS
+* [Docker][docker] - everything can be run in containers
+* [Docker Compose][docker-compose] - orchestrating the Docker containers
+* [Fabric][fabric] - automatic deploys
 
-There is more information in the [readme][].
+All of these are included in the template and configured to work well. There is
+more information in the [readme][template-repo] of the template.
 
 [django]: https://www.djangoproject.com
 [readme]: https://gitlab.com
+[react]: https://reactjs.org/
+[redux]: https://redux.js.org/
+[razzle]: https://github.com/jaredpalmer/razzle
+[docker]: https://www.docker.com/
+[docker-compose]: https://docs.docker.com/compose/
+[cookiecutter]: https://github.com/audreyr/cookiecutter
+[fabric]: http://www.fabfile.org/
+[scss]: https://sass-lang.com/
+[postgres]: https://www.postgresql.org/
 
 ## Getting up and running
 
@@ -51,8 +64,7 @@ There is more information in the [readme][].
 
 There are a couple of pre-requisites for generating the project and running it.
 We use Pipenv for managing Python dependencies and generating projects. If you
-haven't used Pipenv before, then it is a really nice package manager for
-Python.
+haven't used Pipenv before, then it is a really nice package manager for Python.
 
 Firstly, make sure that you have `pipenv` available, it can easily be installed
 following the [installation instructions][pipenv-install] on their website. In
@@ -76,11 +88,17 @@ For reference, here are the versions of the packages I'm using:
 
 ### Generating the project
 
-Now that everything is set up, we can generate our project! Clone the project
+Now that everything is set up, you can generate your project! Clone the project
 template anywhere on your file system and make sure to clone the `spa` branch:
 
     git clone https://gitlab.com/thorgate-public/django-project-template.git -b spa
     cd django-project-template
+
+    # or
+
+    git clone https://gitlab.com/thorgate-public/django-project-template.git
+    cd django-project-template
+    git checkout spa
 
 Next, install the dependencies needed to build a new project. This includes
 `cookiecutter` and a few other packages specified in the template's `Pipfile`.
@@ -130,7 +148,7 @@ you to edit your local Django settings file, just save and close that. If the
 settings file opens in `vi`, then you can save and exit by typing
 `<Esc>:wq<Enter>`.
 
-Now that the project is set up, we can run it through Docker and opening
+Now that the project is set up, we can run it through Docker and open
 `127.0.0.1:8000` in the browser:
 
     docker-compose up
@@ -145,6 +163,8 @@ and a PostgreSQL database. Since all of these services are running in Docker
 containers, we didn't need to install much locally.
 
 ## Overview of the structure
+
+TODO: The structure section probably needs more work. Not sure what to add here.
 
 Let's quickly go through the most important files and directories in our new
 project. First, the top level files and directories look like this:
@@ -226,12 +246,22 @@ already set up, and that Django settings are divided into environment-based
 configuration files. This means that one can easily use different settings for
 production, development, and testing.
 
+Another important thing to mention here is that we use a collection of packages
+that include a bunch of useful SPA utilities. These packages have the
+`@thorgate` prefix in the client's dependencies. The documentation and source
+code for those packages is available on the [`tg-spa-utils` GitHub
+page][tg-spa-utils].
+
+We also have quite a few other packages that make developing with Django and
+React easier.
+
 Don't worry if this seems a bit overwhelming right now, we'll go through some
 simple examples together.
 
 [razzle]: https://github.com/jaredpalmer/razzle
 [ducks]: https://github.com/erikras/ducks-modular-redux
 [formik]: https://github.com/jaredpalmer/formik
+[tg-spa-utils]: https://github.com/thorgate/tg-spa-utils
 
 ## Our example app
 
@@ -239,23 +269,23 @@ Now that you have a general overview of what the project structure is like, we
 can start building our small application!
 
 I would like to create a simple Parrot reference web app that can be used to
-keep track of interesting parrots. Each user can create parrots and see a list
+keep track of interesting parrots. Each user can add parrots and see a list
 of their parrots. We'll make sure that server-side rendering works and make use
 of some of the interesting technologies included in the project template.
 
 ### Showing parrots
 
 Let's start with showing the user their saved parrots. Since we already have
-users and authentication set up, then we don't need to spend too much effort on
+users and authentication set up, then we don't need to put too much effort into
 getting the current user's personal parrots.
 
 Firstly, it's a good idea to create a superuser account for development. We
 would normally call `python manage.py createsuperuser` to create a superuser in
 Django, but since we're running everything inside Docker, then it would be a
-bit trickier. Something like this: `docker-compose run --rm django python manage.py createsuperuser` would do the trick. But who can remember that? In
-order to make it easier for everyone, the `Makefile` includes a useful alias for
-running management commands: `make docker-manage cmd="createsuperuser"`. Now we
-can either click on "Admin panel" in the navbar or go to
+bit trickier. Something like this would do the trick: `docker-compose run --rm django python manage.py createsuperuser`. But who can remember that? In order to
+make it easier for everyone, the `Makefile` includes a useful alias for running
+management commands: `make docker-manage cmd="createsuperuser"`. Now we can
+either click on "Admin panel" in the navbar or go to
 `http://127.0.0.1:8000/adminpanel/` to see the Django admin page.
 
 Let's create a new app `parrots`!
@@ -263,7 +293,7 @@ Let's create a new app `parrots`!
     make docker-manage cmd="startapp parrots"
 
 Since the folder is created inside the Docker container, it is possible that
-its permissions are incorrect. We can easily fix that by running.
+its permissions are incorrect. We can fix that by running the following command:
 
     sudo chown -R "$(id -un):$(id -gn)" parrot_mania
 
@@ -470,7 +500,7 @@ class ParrotViewSet(viewsets.ModelViewSet):
 ```
 
 ```
-http://127.0.0.1:8000/api/parrots/
+curl http://127.0.0.1:8000/api/parrots/
 
 [
     {"id":1,"name":"Alex","link":"https://www.youtube.com/user/doorbell26"},
@@ -996,13 +1026,17 @@ const ParrotsList = ({ parrots }) => (
 );
 ```
 
-### Full source of Parrot-mania
+The functionality I planned for Parrot-mania is finished now! If you're eager to
+continue working on this project, try adding updating and deleting of parrots as
+well in order to make it a full CRUD app.
 
 You can check out the full source of Parrot-mania here:
-[https://github.com/JoosepAlviste/parrot-mania](https://github.com/JoosepAlviste/parrot-mania)
+[https://github.com/JoosepAlviste/parrot-mania](https://github.com/JoosepAlviste/parrot-mania).
 
-## Future improvements to the template
+## Conclusion
 
-* Kubernetes
-* Out-of-the-box testing set up with `react-testing-library`
-* GraphQL (???)
+We created a simple parrots' management web app using some interesting
+technologies included in Thorgate's SPA project template.
+
+Let me know if you'd like a follow-up post by leaving a comment or giving me a
+clap or two!
